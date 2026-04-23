@@ -1,15 +1,94 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elbrus Climbing Layout</title>
-  <link rel="stylesheet" href="scss/style.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Elbrus Climbing Layout</title>
+    <link rel="stylesheet" href="scss/main.css"/>
 </head>
 <body>
-  <main class="container">
-    <h1>Привет, Elbrus!</h1>
-    <p>SCSS подключен через скомпилированный CSS-файл.</p>
-  </main>
+
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <section class="header__content-row header__content-row--top">
+                <a href="#" class="header__container-logo" aria-label="Elbrus Climbing">
+                    <img src="/images/logo.svg"
+                         alt="Elbrus Climbing"
+                         class="header__logo"
+                    >
+                </a>
+
+                <div class="header__panel">
+
+                    <nav class="header__navigation" aria-label="Основная навигация">
+
+                        <a href="#"
+                           class="header__navigation-item header__navigation-item--desktop-only">
+                            Все туры
+                        </a>
+
+                        <a href="tel:+74951087465"
+                           class="header__navigation-item header__navigation-item--phone">
+                            +7 495 108 74 65
+                        </a>
+
+                    </nav>
+
+                    <div class="header__actions">
+
+                        <div class="header__currency">
+                            <select class="header__currency-select"
+                                    name="currency"
+                                    aria-label="Выбор валюты">
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="rub">RUB</option>
+                            </select>
+                        </div>
+
+                        <button class="header__language"
+                                type="button"
+                                aria-label="Язык"
+                        >
+                            EN
+                        </button>
+
+                        <button class="header__order"
+                                type="button"
+                                aria-label="Заказать звонок">
+                            Заказать звонок
+                        </button>
+                    </div>
+
+                    <div class="header__mobile-actions">
+
+                        <button class="header__action"
+                                type="button"
+                                aria-label="Сообщения">
+                            <img src="/images/chat.png"
+                                 alt="chat"
+                                 class="header__action-icon">
+                        </button>
+
+                        <button class="header__burger"
+                                type="button"
+                                aria-label="Меню"
+                        >
+                            <span class="header__burger-line"></span>
+                            <span class="header__burger-line"></span>
+                            <span class="header__burger-line"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="header__content-row"></section>
+            <section class="header__content-row"></section>
+
+        </div>
+    </div>
+</header>
+
 </body>
 </html>

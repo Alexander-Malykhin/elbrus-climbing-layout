@@ -1,0 +1,17 @@
+@use "reset.scss";
+@use './settings/fonts.scss' as *;
+@use './settings/colors.scss';
+@use './settings/functions' as *;
+//blocks
+@use './blocks/header';
+
+
+body {
+  font-family: $ff-inter;
+  font-size: 1rem;
+}
+
+.container {
+  width: min(100% - rem(33), rem(1280));
+  margin: 0 auto;
+}

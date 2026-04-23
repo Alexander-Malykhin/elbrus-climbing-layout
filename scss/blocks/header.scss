@@ -1,0 +1,296 @@
+@use '../settings/fonts' as *;
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+@use '../settings/mixins' as *;
+
+.header {
+
+  background-image:
+          linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+          url("/images/bg.png");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+
+  &__content {
+    padding-top: rem(30);
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(22);
+  }
+
+
+  &__content-row--top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: rem(40);
+    flex-wrap: wrap;
+  }
+
+
+  &__container-logo {
+    display: block;
+    width: clamp(rem(60), 10vw, rem(100));
+    flex-shrink: 0;
+  }
+
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+
+    flex-wrap: wrap;
+  }
+
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+
+    flex-wrap: wrap;
+  }
+
+
+  &__navigation-item {
+    @include text-medium;
+
+    color: $white;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: color .3s ease;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(22);
+
+    flex-wrap: wrap;
+  }
+
+
+  &__mobile-actions {
+    display: none;
+  }
+
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: rem(20);
+    height: rem(20);
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+    cursor: pointer;
+  }
+
+
+  &__action-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
+  &__order {
+    @include text-medium;
+
+    background: transparent;
+    border: none;
+
+    color: $main-green;
+    cursor: pointer;
+
+    transition: color .3s ease;
+
+    &:hover {
+      @include green-hover;
+    }
+  }
+
+
+  &__language {
+    width: rem(22);
+    height: rem(22);
+
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    @include text-sm;
+    color: $white;
+  }
+
+
+  &__currency {
+    position: relative;
+  }
+
+
+  &__currency-select {
+
+    min-width: rem(68);
+    height: rem(22);
+
+    padding: rem(2) rem(15);
+
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+
+    background: transparent;
+    color: $white;
+
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+
+    @include text-sm;
+  }
+
+
+  &__currency-select option {
+    color: $main-green;
+    background: $white;
+  }
+
+
+  &__currency::after {
+
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: rem(15);
+
+    width: rem(6);
+    height: rem(6);
+
+    border-right: rem(1.5) solid $white;
+    border-bottom: rem(1.5) solid $white;
+
+    transform: translateY(-70%) rotate(45deg);
+
+    pointer-events: none;
+  }
+
+
+  &__burger {
+    display: none;
+  }
+
+
+
+  /* ---------- 1024 ---------- */
+
+  @media (max-width: rem(1024)) {
+
+    &__content-row--top {
+      gap: rem(20);
+    }
+
+    &__panel {
+      gap: rem(20);
+    }
+
+    &__navigation {
+      gap: rem(16);
+    }
+
+    &__actions {
+      gap: rem(16);
+    }
+
+  }
+
+
+
+  /* ---------- 834 ---------- */
+
+  @media (max-width: rem(834)) {
+
+    &__content-row--top {
+      align-items: flex-start;
+      gap: rem(20);
+    }
+
+    &__navigation-item--desktop-only {
+      display: none;
+    }
+
+    &__navigation-item--phone {
+      padding-right: rem(30);
+    }
+
+    &__mobile-actions {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+
+      padding-left: rem(30);
+    }
+
+    &__burger {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: rem(30);
+      height: rem(18);
+
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    &__burger-line {
+      height: rem(1);
+      background: $white;
+    }
+
+  }
+
+  /* ---------- 700 ---------- */
+
+  @media (max-width: rem(700)) {
+
+    &__actions {
+      display: none;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+  }
+}

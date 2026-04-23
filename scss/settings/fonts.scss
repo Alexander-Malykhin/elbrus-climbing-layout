@@ -1,0 +1,89 @@
+@use 'functions' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// font family
+$ff-inter: 'Inter', sans-serif;
+
+// font sizes
+$fz-45: rem(45);
+$fz-24: rem(24);
+$fz-16: rem(16);
+$fz-12: rem(12);
+
+// font weights
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;
+
+// typography tokens
+$title-xl-size: $fz-45;
+$title-xl-weight: $fw-bold;
+
+$title-lg-size: $fz-24;
+$title-lg-weight: $fw-semi-bold;
+
+$title-md-caps-size: $fz-16;
+$title-md-caps-weight: $fw-semi-bold;
+
+$title-md-size: $fz-16;
+$title-md-weight: $fw-semi-bold;
+
+$text-base-size: $fz-16;
+$text-base-weight: $fw-regular;
+
+$text-medium-size: $fz-16;
+$text-medium-weight: $fw-medium;
+
+$text-sm-size: $fz-12;
+$text-sm-weight: $fw-regular;
+
+// mixins
+@mixin title-xl {
+  font-family: $ff-inter;
+  font-size: $title-xl-size;
+  font-weight: $title-xl-weight;
+}
+
+@mixin title-lg {
+  font-family: $ff-inter;
+  font-size: $title-lg-size;
+  font-weight: $title-lg-weight;
+}
+
+@mixin title-md-caps {
+  font-family: $ff-inter;
+  font-size: $title-md-caps-size;
+  font-weight: $title-md-caps-weight;
+  text-transform: uppercase;
+}
+
+@mixin title-md {
+  font-family: $ff-inter;
+  font-size: $title-md-size;
+  font-weight: $title-md-weight;
+}
+
+@mixin text-base {
+  font-family: $ff-inter;
+  font-size: $text-base-size;
+  font-weight: $text-base-weight;
+}
+
+@mixin text-medium {
+  font-family: $ff-inter;
+  font-size: $text-medium-size;
+  font-weight: $text-medium-weight;
+}
+
+@mixin text-sm {
+  font-family: $ff-inter;
+  font-size: $text-sm-size;
+  font-weight: $text-sm-weight;
+}
