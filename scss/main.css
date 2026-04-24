@@ -253,7 +253,6 @@ input[type=file] {
 }
 @media (max-width: 52.125rem) {
   .header__content-row--top {
-    align-items: flex-start;
     gap: 1.25rem;
   }
   .header__navigation-item--desktop-only {
@@ -287,11 +286,18 @@ input[type=file] {
   /* ---------- 700 ---------- */
 }
 @media (max-width: 43.75rem) {
+  .header {
+    background-image: none;
+  }
   .header__actions {
     display: none;
   }
   .header__navigation {
     display: none;
+  }
+  .header__content {
+    padding: 0.625rem 0;
+    background-color: #FFFFFF;
   }
 }
 

@@ -239,7 +239,6 @@
   @media (max-width: rem(834)) {
 
     &__content-row--top {
-      align-items: flex-start;
       gap: rem(20);
     }
 
@@ -283,6 +282,7 @@
   /* ---------- 700 ---------- */
 
   @media (max-width: rem(700)) {
+    background-image: none;
 
     &__actions {
       display: none;
@@ -292,5 +292,9 @@
       display: none;
     }
 
+    &__content {
+      padding: rem(10) 0;
+      background-color: #FFFFFF;
+    }
   }
 }
