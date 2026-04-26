@@ -1,10 +1,14 @@
-@use "reset.scss";
-@use './settings/fonts.scss' as *;
-@use './settings/colors.scss';
-@use './settings/functions' as *;
-//blocks
-@use './blocks/header';
+@use "./base/reset.scss";
 
+@use './settings/fonts' as *;
+@use './settings/colors' as *;
+@use './settings/functions' as *;
+@use './settings/mixins' as *;
+
+@use './components/button';
+@use './components/burger';
+
+@use './blocks/header/index';
 
 body {
   font-family: $ff-inter;

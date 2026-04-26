@@ -1,0 +1,24 @@
+@use '../settings/colors' as *;
+@use '../settings/mixins' as *;
+@use '../settings/fonts' as *;
+
+.button {
+  padding: 0;
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  &--callback {
+    @include text-medium;
+
+    color: $main-green;
+
+    transition: color .3s ease;
+
+    &:hover {
+      @include green-hover;
+    }
+  }
+}

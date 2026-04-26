@@ -1,51 +1,29 @@
-@use '../settings/fonts' as *;
-@use '../settings/colors' as *;
-@use '../settings/functions' as *;
-@use '../settings/mixins' as *;
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
 
-.header {
+.header-top {
+  padding-top: rem(30);
 
-  background-image:
-          linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-          url("/images/bg.png");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(40);
 
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  flex-wrap: wrap;
 
-
-  &__content {
-    padding-top: rem(30);
-
-    display: flex;
-    flex-direction: column;
-    gap: rem(22);
-  }
-
-
-  &__content-row--top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: rem(40);
-    flex-wrap: wrap;
-  }
-
-
-  &__container-logo {
+  &__logo-link {
     display: block;
     width: clamp(rem(60), 10vw, rem(100));
     flex-shrink: 0;
   }
-
 
   &__logo {
     display: block;
     width: 100%;
     height: auto;
   }
-
 
   &__panel {
     display: flex;
@@ -55,8 +33,7 @@
     flex-wrap: wrap;
   }
 
-
-  &__navigation {
+  &__nav {
     display: flex;
     align-items: center;
     gap: rem(24);
@@ -64,21 +41,18 @@
     flex-wrap: wrap;
   }
 
-
-  &__navigation-item {
+  &__nav-link {
     @include text-medium;
 
     color: $white;
     text-decoration: none;
 
-    cursor: pointer;
-    transition: color .3s ease;
+    transition: opacity .3s ease;
 
     &:hover {
       opacity: .85;
     }
   }
-
 
   &__actions {
     display: flex;
@@ -88,13 +62,11 @@
     flex-wrap: wrap;
   }
 
-
   &__mobile-actions {
     display: none;
   }
 
-
-  &__action {
+  &__icon-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,56 +81,36 @@
     cursor: pointer;
   }
 
-
-  &__action-icon {
+  &__icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-
-  &__order {
-    @include text-medium;
-
-    background: transparent;
-    border: none;
-
-    color: $main-green;
-    cursor: pointer;
-
-    transition: color .3s ease;
-
-    &:hover {
-      @include green-hover;
-    }
-  }
-
-
   &__language {
     width: rem(22);
     height: rem(22);
-
-    border: rem(1) solid $white;
-    border-radius: rem(4);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+
     background: transparent;
 
     @include text-sm;
     color: $white;
-  }
 
+    cursor: pointer;
+  }
 
   &__currency {
     position: relative;
   }
 
-
   &__currency-select {
-
     min-width: rem(68);
     height: rem(22);
 
@@ -175,17 +127,14 @@
     outline: none;
 
     @include text-sm;
+
+    option {
+      color: $main-green;
+      background: $white;
+    }
   }
-
-
-  &__currency-select option {
-    color: $main-green;
-    background: $white;
-  }
-
 
   &__currency::after {
-
     content: '';
 
     position: absolute;
@@ -203,50 +152,28 @@
     pointer-events: none;
   }
 
-
-  &__burger {
-    display: none;
-  }
-
-
-
-  /* ---------- 1024 ---------- */
-
   @media (max-width: rem(1024)) {
-
-    &__content-row--top {
-      gap: rem(20);
-    }
+    gap: rem(20);
 
     &__panel {
       gap: rem(20);
     }
 
-    &__navigation {
+    &__nav {
       gap: rem(16);
     }
 
     &__actions {
       gap: rem(16);
     }
-
   }
 
-
-
-  /* ---------- 834 ---------- */
-
   @media (max-width: rem(834)) {
-
-    &__content-row--top {
-      gap: rem(20);
-    }
-
-    &__navigation-item--desktop-only {
+    &__nav-link--desktop-only {
       display: none;
     }
 
-    &__navigation-item--phone {
+    &__nav-link--phone {
       padding-right: rem(30);
     }
 
@@ -257,44 +184,26 @@
 
       padding-left: rem(30);
     }
-
-    &__burger {
-      display: flex;
-
-      flex-direction: column;
-      justify-content: space-between;
-
-      width: rem(30);
-      height: rem(18);
-
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-
-    &__burger-line {
-      height: rem(1);
-      background: $white;
-    }
-
   }
 
-  /* ---------- 700 ---------- */
-
   @media (max-width: rem(700)) {
-    background-image: none;
+    padding: rem(10) 0;
+    background-color: $white;
 
     &__actions {
       display: none;
     }
 
-    &__navigation {
+    &__nav {
       display: none;
     }
 
-    &__content {
-      padding: rem(10) 0;
-      background-color: #FFFFFF;
+    &__logo {
+      content: url("/images/logo/logo-black.svg");
+    }
+
+    &__icon {
+      content: url("/images/chat/chat-black.svg");
     }
   }
 }

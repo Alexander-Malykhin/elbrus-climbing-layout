@@ -1,0 +1,19 @@
+@use 'header-top';
+@use 'header-middle';
+@use 'header-bottom';
+
+@use '../../settings/functions' as *;
+
+.header {
+  background-image:
+          linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+          url("/images/bg.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: rem(700)) {
+    background-image: none;
+  }
+}

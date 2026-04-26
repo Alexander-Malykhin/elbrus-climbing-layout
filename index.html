@@ -10,81 +10,116 @@
 
 <header class="header">
     <div class="container">
-        <div class="header__content">
-            <section class="header__content-row header__content-row--top">
-                <a href="#" class="header__container-logo" aria-label="Elbrus Climbing">
-                    <img src="/images/logo.svg"
-                         alt="Elbrus Climbing"
-                         class="header__logo"
-                    >
-                </a>
+        <!---HEADER_TOP--->
+        <div class="header-top">
+            <a href="#" class="header-top__logo-link" aria-label="Elbrus Climbing">
+                <img src="/images/logo/logo-white.svg" alt="Elbrus Climbing" class="header-top__logo">
+            </a>
 
-                <div class="header__panel">
+            <div class="header-top__panel">
+                <nav class="header-top__nav" aria-label="Основная навигация">
+                    <a href="#" class="header-top__nav-link header-top__nav-link--desktop-only">
+                        Все туры
+                    </a>
 
-                    <nav class="header__navigation" aria-label="Основная навигация">
+                    <a href="tel:+74951087465" class="header-top__nav-link header-top__nav-link--phone">
+                        +7 495 108 74 65
+                    </a>
+                </nav>
 
-                        <a href="#"
-                           class="header__navigation-item header__navigation-item--desktop-only">
-                            Все туры
-                        </a>
-
-                        <a href="tel:+74951087465"
-                           class="header__navigation-item header__navigation-item--phone">
-                            +7 495 108 74 65
-                        </a>
-
-                    </nav>
-
-                    <div class="header__actions">
-
-                        <div class="header__currency">
-                            <select class="header__currency-select"
-                                    name="currency"
-                                    aria-label="Выбор валюты">
-                                <option value="usd">USD</option>
-                                <option value="eur">EUR</option>
-                                <option value="rub">RUB</option>
-                            </select>
-                        </div>
-
-                        <button class="header__language"
-                                type="button"
-                                aria-label="Язык"
-                        >
-                            EN
-                        </button>
-
-                        <button class="header__order"
-                                type="button"
-                                aria-label="Заказать звонок">
-                            Заказать звонок
-                        </button>
+                <div class="header-top__actions">
+                    <div class="header-top__currency">
+                        <select class="header-top__currency-select" name="currency" aria-label="Выбор валюты">
+                            <option value="usd">USD</option>
+                            <option value="eur">EUR</option>
+                            <option value="rub">RUB</option>
+                        </select>
                     </div>
 
-                    <div class="header__mobile-actions">
+                    <button class="header-top__language" type="button" aria-label="Язык">
+                        EN
+                    </button>
 
-                        <button class="header__action"
-                                type="button"
-                                aria-label="Сообщения">
-                            <img src="/images/chat.svg"
-                                 alt="chat"
-                                 class="header__action-icon">
-                        </button>
-
-                        <button class="header__burger"
-                                type="button"
-                                aria-label="Меню"
-                        >
-                            <span class="header__burger-line"></span>
-                            <span class="header__burger-line"></span>
-                            <span class="header__burger-line"></span>
-                        </button>
-                    </div>
+                    <button class="button button--callback" type="button" aria-label="Заказать звонок">
+                        Заказать звонок
+                    </button>
                 </div>
-            </section>
 
-            <section class="header__content-row"></section>
-            <section class="header__content-row"></section>
+                <div class="header-top__mobile-actions">
+                    <button class="header-top__icon-button" type="button" aria-label="Сообщения">
+                        <img src="/images/chat/chat-white.svg"
+                             alt=""
+                             class="header-top__icon">
+                    </button>
+
+                    <button class="burger" type="button" aria-label="Меню">
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!---HEADER_MIDDLE--->
+        <div class="header-middle">
+            <div class="header-middle__banner">
+                <ul class="header-middle__tags">
+                    <li class="header-middle__tag">Непал</li>
+                    <li class="header-middle__tag">Аннапурна</li>
+                    <li class="header-middle__tag">Треккинг</li>
+                </ul>
+
+                <h1 class="header-middle__title">
+                    Тур в Непал: трек вокруг Аннапурны и озеро Тиличо, Гималаи
+                </h1>
+
+                <button class="header-middle__play" type="button" aria-label="Смотреть видео">
+                    <span class="header-middle__play-icon"></span>
+                </button>
+
+            </div>
+
+            <div class="header-middle__messengers">
+                <p class="header-middle__messengers-text">
+                    Мы на связи:
+                </p>
+
+
+                <div class="header-middle__messengers-list">
+                    <a href="#" class="header-middle__messenger-link" aria-label="WhatsApp">
+                        <img src="/images/messengers/whatsapp.svg" alt="" class="header-middle__messenger-icon">
+                    </a>
+
+                    <a href="#" class="header-middle__messenger-link" aria-label="Telegram">
+                        <img src="/images/messengers/telegram.svg" alt="" class="header-middle__messenger-icon">
+                    </a>
+
+                    <a href="#" class="header-middle__messenger-link" aria-label="VK">
+                        <img src="/images/messengers/vk.svg" alt="" class="header-middle__messenger-icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="header-middle__slider">
+                <div class="header-middle__slider-track">
+
+                    <div class="header-middle__slide">
+                        <img src="/images/bg.png" alt="" class="header-middle__slide-image">
+
+                        <button class="header-middle__slide-play" type="button" aria-label="Смотреть видео">
+                            <span class="header-middle__play-icon"></span>
+                        </button>
+                    </div>
+
+                    <div class="header-middle__slide">
+                        <img src="/images/bg.png" alt="" class="header-middle__slide-image">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!---HEADER_BOTTOM--->
+        <div class="header-bottom">
 
         </div>
     </div>
