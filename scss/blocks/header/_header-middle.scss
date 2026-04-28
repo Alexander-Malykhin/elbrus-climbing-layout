@@ -24,7 +24,7 @@
   }
 
   &__tag {
-    @include text-sm;
+    @include fz-12($fw-regular);
 
     padding: rem(2.5) rem(8.5);
 
@@ -81,7 +81,7 @@
   }
 
   &__messengers-text {
-    @include text-medium;
+    @include fz-16($fw-medium);
 
     max-width: rem(54);
 
@@ -128,7 +128,7 @@
     }
 
     &__title {
-      @include title-hero-mobile;
+      @include fz-20($fw-bold);
 
       order: 1;
       max-width: 100%;

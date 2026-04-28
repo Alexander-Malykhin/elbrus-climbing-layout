@@ -4,6 +4,9 @@
 
 @use '../../settings/functions' as *;
 
+@use '../../components/button';
+@use '../../components/rating-bars';
+
 .header {
   background-image:
           linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),

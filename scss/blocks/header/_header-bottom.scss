@@ -1,0 +1,102 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+@use '../../settings/containers' as *;
+
+// header-bottom
+
+.header-bottom {
+  padding: rem(22) 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: rem(10);
+
+  &__stats {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(48);
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__value-desktop {
+    @include fz-40($fw-extra-bold);
+    color: $white;
+
+    &-text {
+      @include fz-16($fw-regular);
+    }
+  }
+
+  &__label-desktop {
+    @include fz-16($fw-regular);
+    color: $white;
+  }
+
+  &__value-mobile,
+  &__label-mobile {
+    display: none;
+  }
+
+  &__information {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(20);
+  }
+
+  &__text {
+    max-width: 100%;
+    @include fz-16($fw-regular);
+    color: $white;
+
+    &-accent {
+      color: $main-green;
+    }
+  }
+
+  @media (max-width: rem(1280)) {
+    &__text {
+      display: none;
+    }
+  }
+
+  @media (max-width: rem(840)) {
+    &__stat {
+      align-items: center;
+      justify-content: center;
+      gap: rem(2);
+      text-align: center;
+    }
+
+    &__value-desktop,
+    &__label-desktop,
+    .rating-bars {
+      display: none;
+    }
+
+    &__value-mobile,
+    &__label-mobile {
+      display: block;
+      color: $white;
+    }
+
+    &__value-mobile {
+      @include fz-18($fw-bold);
+    }
+
+    &__label-mobile {
+      @include fz-12($fw-regular);
+    }
+  }
+
+  @media (max-width: rem(700)) {
+    display: none;
+  }
+}

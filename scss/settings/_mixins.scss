@@ -3,3 +3,7 @@
 @mixin green-hover {
   color: $main-green-hover;
 }
+
+@mixin green-bg-hover {
+  background: $main-green-hover;
+}

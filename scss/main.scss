@@ -4,6 +4,7 @@
 @use './settings/colors' as *;
 @use './settings/functions' as *;
 @use './settings/mixins' as *;
+@use './settings/containers' as *;
 
 @use './components/button';
 @use './components/burger';
@@ -16,6 +17,6 @@ body {
 }
 
 .container {
-  width: min(100% - rem(33), rem(1280));
+  width: min(100% - rem(33), rem($w_1600));
   margin: 0 auto;
 }

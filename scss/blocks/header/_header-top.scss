@@ -41,8 +41,19 @@
     flex-wrap: wrap;
   }
 
+  &__callback {
+    @include fz-16($fw-medium);
+    color: $main-green;
+
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      @include green-hover;
+    }
+  }
+
   &__nav-link {
-    @include text-medium;
+    @include fz-16($fw-medium);
 
     color: $white;
     text-decoration: none;
@@ -100,7 +111,7 @@
 
     background: transparent;
 
-    @include text-sm;
+    @include fz-12($fw-regular);
     color: $white;
 
     cursor: pointer;
@@ -126,7 +137,7 @@
     cursor: pointer;
     outline: none;
 
-    @include text-sm;
+    @include fz-12($fw-regular);
 
     option {
       color: $main-green;

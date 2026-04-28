@@ -1,24 +1,18 @@
-@use '../settings/colors' as *;
-@use '../settings/mixins' as *;
 @use '../settings/fonts' as *;
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+@use '../settings/mixins' as *;
 
 .button {
-  padding: 0;
-  border: 0;
+  @include fz-16($fw-regular);
 
-  background: transparent;
+  padding: rem(10.5) rem(29.5);
+  background-color: $main-green;
+  color: $white;
+  border-radius: rem(4);
+  transition: all 0.3s ease-in-out;
 
-  cursor: pointer;
-
-  &--callback {
-    @include text-medium;
-
-    color: $main-green;
-
-    transition: color .3s ease;
-
-    &:hover {
-      @include green-hover;
-    }
+  &:hover {
+    @include green-bg-hover;
   }
 }

@@ -5,91 +5,95 @@
 $ff-inter: 'Inter', sans-serif;
 
 // font sizes
-$fz-45: rem(45);
-$fz-35: rem(35);
-$fz-24: rem(24);
-$fz-20: rem(20);
-$fz-16: rem(16);
 $fz-12: rem(12);
+$fz-14: rem(14);
+$fz-16: rem(16);
+$fz-18: rem(18);
+$fz-20: rem(20);
+$fz-22: rem(22);
+$fz-24: rem(24);
+$fz-26: rem(26);
+$fz-28: rem(28);
+$fz-30: rem(30);
+$fz-32: rem(32);
+$fz-34: rem(34);
+$fz-36: rem(36);
+$fz-38: rem(38);
+$fz-40: rem(40);
+$fz-42: rem(42);
+$fz-44: rem(44);
+$fz-45: rem(45);
 
 // font weights
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-semi-bold: 600;
 $fw-bold: 700;
+$fw-extra-bold: 800;
 
-// typography tokens
-$title-xl-size: $fz-45;
-$title-xl-weight: $fw-bold;
-
-$title-hero-size: clamp(rem(35), 4vw, rem(45));
-$title-hero-weight: $fw-bold;
-
-$title-hero-mobile-size: $fz-20;
-$title-hero-mobile-weight: $fw-bold;
-
-$title-lg-size: $fz-24;
-$title-lg-weight: $fw-semi-bold;
-
-$title-md-size: $fz-16;
-$title-md-weight: $fw-semi-bold;
-
-$text-base-size: $fz-16;
-$text-base-weight: $fw-regular;
-
-$text-medium-size: $fz-16;
-$text-medium-weight: $fw-medium;
-
-$text-sm-size: $fz-12;
-$text-sm-weight: $fw-regular;
-
-// mixins
-@mixin title-xl {
+// base mixin
+@mixin font($size, $weight: $fw-regular, $letter-spacing: 0) {
   font-family: $ff-inter;
-  font-size: $title-xl-size;
-  font-weight: $title-xl-weight;
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+}
+
+// size mixins
+@mixin fz-12($weight: $fw-regular) { @include font($fz-12, $weight); }
+@mixin fz-14($weight: $fw-regular) { @include font($fz-14, $weight); }
+@mixin fz-16($weight: $fw-regular) { @include font($fz-16, $weight); }
+@mixin fz-18($weight: $fw-regular) { @include font($fz-18, $weight); }
+@mixin fz-20($weight: $fw-regular) { @include font($fz-20, $weight); }
+@mixin fz-22($weight: $fw-regular) { @include font($fz-22, $weight); }
+@mixin fz-24($weight: $fw-regular) { @include font($fz-24, $weight); }
+@mixin fz-26($weight: $fw-regular) { @include font($fz-26, $weight); }
+@mixin fz-28($weight: $fw-regular) { @include font($fz-28, $weight); }
+@mixin fz-30($weight: $fw-regular) { @include font($fz-30, $weight); }
+@mixin fz-32($weight: $fw-regular) { @include font($fz-32, $weight); }
+@mixin fz-34($weight: $fw-regular) { @include font($fz-34, $weight); }
+@mixin fz-36($weight: $fw-regular) { @include font($fz-36, $weight); }
+@mixin fz-38($weight: $fw-regular) { @include font($fz-38, $weight); }
+@mixin fz-40($weight: $fw-regular) { @include font($fz-40, $weight); }
+@mixin fz-42($weight: $fw-regular) { @include font($fz-42, $weight); }
+@mixin fz-44($weight: $fw-regular) { @include font($fz-44, $weight); }
+@mixin fz-45($weight: $fw-regular) { @include font($fz-45, $weight); }
+
+// semantic mixins
+@mixin title-xl {
+  @include fz-45($fw-bold);
 }
 
 @mixin title-hero {
   font-family: $ff-inter;
-  font-size: $title-hero-size;
-  font-weight: $title-hero-weight;
-  line-height: 1.15;
+  font-size: clamp(rem(35), 4vw, rem(45));
+  font-weight: $fw-bold;
 }
 
 @mixin title-hero-mobile {
-  font-family: $ff-inter;
-  font-size: $title-hero-mobile-size;
-  font-weight: $title-hero-mobile-weight;
-  line-height: 1.2;
+  @include fz-20($fw-bold);
 }
 
 @mixin title-lg {
-  font-family: $ff-inter;
-  font-size: $title-lg-size;
-  font-weight: $title-lg-weight;
+  @include fz-24($fw-semi-bold);
 }
 
 @mixin title-md {
-  font-family: $ff-inter;
-  font-size: $title-md-size;
-  font-weight: $title-md-weight;
+  @include fz-16($fw-semi-bold);
 }
 
 @mixin text-base {
-  font-family: $ff-inter;
-  font-size: $text-base-size;
-  font-weight: $text-base-weight;
+  @include fz-16($fw-regular);
 }
 
 @mixin text-medium {
-  font-family: $ff-inter;
-  font-size: $text-medium-size;
-  font-weight: $text-medium-weight;
+  @include fz-16($fw-medium);
 }
 
 @mixin text-sm {
-  font-family: $ff-inter;
-  font-size: $text-sm-size;
-  font-weight: $text-sm-weight;
+  @include fz-12($fw-regular);
+}
+
+@mixin header-stat-value {
+  @include fz-40($fw-extra-bold);
 }
