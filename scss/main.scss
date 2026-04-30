@@ -1,15 +1,31 @@
-@use "./base/reset.scss";
+@use "base/reset.scss";
 
-@use './settings/fonts' as *;
-@use './settings/colors' as *;
-@use './settings/functions' as *;
-@use './settings/mixins' as *;
-@use './settings/containers' as *;
+//settings
+@use 'settings/fonts' as *;
+@use 'settings/colors' as *;
+@use 'settings/functions' as *;
+@use 'settings/mixins' as *;
+@use 'settings/containers' as *;
 
-@use './components/button';
-@use './components/burger';
+//components
+@use 'components/button';
+@use 'components/button-secondary';
+@use 'components/burger';
+@use 'components/navigation-tour';
+@use 'components/section-progress-bar';
 
-@use './blocks/header/index';
+//header
+@use './blocks/header/index' as header;
+//program
+@use './blocks/program/index' as program;
+//features
+@use './blocks/features/index' as features;
+//photos
+@use './blocks/trip-photos/index' as trip-photos;
+//itinerary
+@use './blocks/itinerary/index' as itinerary;
+//cost
+@use './blocks/cost/index' as cost;
 
 body {
   font-family: $ff-inter;
@@ -19,4 +35,21 @@ body {
 .container {
   width: min(100% - rem(33), rem($w_1600));
   margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: rem(70);
+}
+
+
+.section {
+  background-color: $white;
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
 }

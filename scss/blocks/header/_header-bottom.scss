@@ -4,8 +4,6 @@
 @use '../../settings/mixins' as *;
 @use '../../settings/containers' as *;
 
-// header-bottom
-
 .header-bottom {
   padding: rem(22) 0;
 
@@ -59,6 +57,10 @@
     &-accent {
       color: $main-green;
     }
+  }
+
+  &__rating {
+    @include rating-bars($white);
   }
 
   @media (max-width: rem(1280)) {

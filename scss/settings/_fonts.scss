@@ -64,6 +64,10 @@ $fw-extra-bold: 800;
   @include fz-45($fw-bold);
 }
 
+@mixin title-xm {
+  @include fz-30($fw-bold);
+}
+
 @mixin title-hero {
   font-family: $ff-inter;
   font-size: clamp(rem(35), 4vw, rem(45));

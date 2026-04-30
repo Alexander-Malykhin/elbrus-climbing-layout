@@ -1,0 +1,20 @@
+@use '../settings/fonts' as *;
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+@use '../settings/mixins' as *;
+
+.button-secondary {
+  @include fz-16($fw-regular);
+
+  padding: rem(7.5) rem(25.5);
+  background-color: $white;
+  color: $main-green;
+  border-radius: rem(4);
+  border: rem(1) solid $main-green;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    @include green-hover;
+    border: rem(1) solid $main-green-hover;
+  }
+}

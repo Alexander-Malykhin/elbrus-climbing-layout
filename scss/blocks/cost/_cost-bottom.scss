@@ -1,0 +1,74 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.cost-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(rem(300), rem(570)));
+  gap: rem(10);
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__title {
+    @include title-md;
+
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+
+    text-transform: uppercase;
+    color: $gray;
+
+    &-icon {
+      width: rem(16);
+      height: rem(16);
+      flex: 0 0 rem(16);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__line {
+    @include text-base;
+
+    display: block;
+    color: $black;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: rem(10);
+      height: rem(1);
+      margin-right: rem(8);
+      margin-bottom: rem(4);
+      background: currentColor;
+    }
+
+    &-text {
+      display: inline;
+    }
+  }
+
+  &__list--included &__line::before {
+    color: $main-green;
+  }
+
+  &__list--excluded &__line::before {
+    color: $red;
+  }
+}

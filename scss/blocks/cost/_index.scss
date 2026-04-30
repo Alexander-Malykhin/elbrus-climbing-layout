@@ -1,0 +1,19 @@
+@use 'cost-top';
+@use 'cost-bottom';
+
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.cost {
+  &__title {
+    @include title-lg;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(60);
+  }
+}

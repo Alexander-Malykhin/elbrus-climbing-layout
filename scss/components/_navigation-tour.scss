@@ -1,0 +1,30 @@
+@use '../settings/fonts' as *;
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+@use '../settings/mixins' as *;
+
+.tour-navigation {
+  background-color: $gray-light;
+  padding: rem(21) 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    @include text-medium;
+    color: $gray;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      @include green-hover;
+    }
+  }
+}

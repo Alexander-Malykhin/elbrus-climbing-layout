@@ -1,0 +1,13 @@
+@use "program-top";
+@use "program-bottom";
+//settings
+@use '../../settings/functions' as *;
+
+.program {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(70);
+  }
+}

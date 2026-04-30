@@ -1,0 +1,87 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.itinerary {
+  &__content {
+    max-width: rem(1040);
+  }
+
+  &__head {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: rem(12);
+    padding: 0 rem(35);
+  }
+
+  &__title {
+    @include title-lg;
+  }
+
+  &__toggle {
+    @include text-base;
+    color: $gray;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: rem(100) minmax(rem(300), rem(835)) rem(24);
+    gap: rem(24);
+    padding: rem(18) rem(24);
+    border-bottom: rem(1) solid $white-light;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__day {
+    @include text-base;
+    color: $gray;
+  }
+
+  &__item-title {
+    @include title-md;
+  }
+
+  &__text {
+    @include text-base;
+  }
+
+  &__arrow {
+    width: rem(16);
+    height: rem(16);
+    border: 0;
+    background: none;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: rem(8);
+      height: rem(8);
+      border-right: rem(1) solid $red;
+      border-bottom: rem(1) solid $red;
+      position: absolute;
+      top: rem(2);
+      left: rem(4);
+      transform: rotate(45deg);
+    }
+  }
+
+  &__item--active {
+    .itinerary__arrow::before {
+      transform: rotate(-135deg);
+      top: rem(6);
+    }
+  }
+}

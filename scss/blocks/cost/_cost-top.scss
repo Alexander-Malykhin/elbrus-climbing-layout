@@ -1,0 +1,152 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.cost-top {
+  display: grid;
+  grid-template-columns: repeat(2, rem(430));
+  justify-content: center;
+  gap: rem(18);
+
+  &__card {
+    min-height: rem(442);
+    padding: rem(42) rem(48) rem(38);
+    background: $white;
+    box-shadow: 0 rem(20) rem(45) rgba($black, 0.08);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include title-lg;
+
+    margin: 0 0 rem(25);
+    color: $black;
+  }
+
+  &__subtitle {
+    @include text-sm;
+
+    min-height: rem(40);
+    margin: 0 0 rem(30);
+    color: $gray;
+    line-height: 1.35;
+  }
+
+  &__subtitle-line {
+    display: block;
+  }
+
+  &__subtitle-green {
+    color: $main-green;
+  }
+
+  &__price-box {
+    min-height: rem(136);
+    margin-bottom: rem(20);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__old-price {
+    @include text-base;
+
+    height: rem(22);
+    margin-bottom: rem(2);
+    color: $gray;
+    text-decoration: line-through;
+
+    &--empty {
+      visibility: hidden;
+    }
+  }
+
+  &__price {
+    @include title-xm;
+
+    margin-bottom: rem(5);
+    color: $main-green;
+    line-height: 1.1;
+
+    span {
+      @include text-base;
+
+      color: $gray;
+      font-weight: $fw-regular;
+    }
+  }
+
+  &__note {
+    @include text-sm;
+
+    color: $black;
+    line-height: 1.25;
+  }
+
+  &__extra {
+    @include text-base;
+
+    margin-top: rem(18);
+    margin-bottom: rem(4);
+    color: $black;
+    font-weight: $fw-bold;
+    line-height: 1.2;
+  }
+
+  &__divider {
+    width: rem(166);
+    height: rem(1);
+    margin-bottom: rem(20);
+    background: rgba($gray, 0.25);
+  }
+
+  &__bottom {
+    min-height: rem(72);
+  }
+
+  &__booking {
+    @include text-base;
+
+    color: $black;
+    line-height: 1.35;
+
+    span,
+    b {
+      font-weight: $fw-bold;
+    }
+
+    span {
+      color: $main-green;
+    }
+  }
+
+  &__cancel {
+    @include text-sm;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    margin-top: rem(14);
+    color: $main-green;
+    text-decoration: none;
+
+    img {
+      width: rem(20);
+      height: rem(20);
+      flex: 0 0 rem(20);
+    }
+  }
+
+  &__card:first-child {
+    .cost-top__price-box {
+      margin-bottom: 0;
+    }
+  }
+}

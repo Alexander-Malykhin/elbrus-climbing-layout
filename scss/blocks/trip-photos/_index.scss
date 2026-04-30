@@ -1,0 +1,60 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.trip-photos {
+
+
+  &__title {
+    @include title-lg;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(6);
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: rem(4);
+    aspect-ratio: 419 / 280;
+
+    &--more::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(4);
+  }
+
+  &__more {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: rem(40);
+  }
+}
