@@ -5,7 +5,7 @@
 
 .cost-top {
   display: grid;
-  grid-template-columns: repeat(2, rem(430));
+  grid-template-columns: repeat(2, minmax(rem(280), rem(430)));
   justify-content: center;
   gap: rem(20);
 
@@ -147,6 +147,15 @@
   &__card:first-child {
     .cost-top__price-box {
       margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: rem(980)) {
+    grid-template-columns: 1fr;
+
+    &__card {
+      min-height: auto;
+      padding: rem(28) rem(20);
     }
   }
 }

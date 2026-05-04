@@ -57,4 +57,16 @@
     color: $white;
     font-size: rem(40);
   }
+
+  @media (max-width: rem(900)) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: rem(600)) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
 }

@@ -167,4 +167,27 @@
     border-bottom: rem(1) solid $main-green;
     transform: rotate(45deg) translateY(rem(-2));
   }
+
+  @media (max-width: rem(1100)) {
+    &__content {
+      max-width: 100%;
+    }
+
+    &__table {
+      overflow-x: auto;
+      padding-bottom: rem(8);
+    }
+
+    &__head,
+    &__item,
+    &__more {
+      min-width: rem(980);
+    }
+  }
+
+  @media (max-width: rem(700)) {
+    &__title {
+      @include title-md;
+    }
+  }
 }

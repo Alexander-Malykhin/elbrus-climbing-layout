@@ -5,7 +5,7 @@
 
 .cost-bottom {
   display: grid;
-  grid-template-columns: repeat(2, minmax(rem(300), rem(570)));
+  grid-template-columns: repeat(2, minmax(rem(260), 1fr));
   gap: rem(10);
   align-items: flex-start;
   justify-content: space-between;
@@ -70,5 +70,10 @@
 
   &__list--excluded &__line::before {
     color: $red;
+  }
+
+  @media (max-width: rem(980)) {
+    grid-template-columns: 1fr;
+    gap: rem(20);
   }
 }

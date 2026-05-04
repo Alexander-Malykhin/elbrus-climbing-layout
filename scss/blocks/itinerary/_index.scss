@@ -85,4 +85,40 @@
       top: rem(6);
     }
   }
+
+  @media (max-width: rem(900)) {
+    &__head {
+      padding: 0 rem(16);
+      justify-content: space-between;
+    }
+
+    &__item {
+      grid-template-columns: rem(72) minmax(0, 1fr) rem(24);
+      gap: rem(16);
+      padding: rem(16);
+    }
+  }
+
+  @media (max-width: rem(640)) {
+    &__item {
+      grid-template-columns: 1fr rem(24);
+      grid-template-areas:
+        "day arrow"
+        "body body";
+      align-items: start;
+    }
+
+    &__day {
+      grid-area: day;
+    }
+
+    &__body {
+      grid-area: body;
+    }
+
+    &__arrow {
+      grid-area: arrow;
+      justify-self: end;
+    }
+  }
 }

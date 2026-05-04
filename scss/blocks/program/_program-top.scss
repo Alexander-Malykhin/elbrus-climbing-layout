@@ -5,7 +5,7 @@
 
 .program-top {
   display: grid;
-  grid-template-columns: minmax(rem(300), rem(960)) minmax(rem(300), rem(400));
+  grid-template-columns: minmax(0, 1fr) minmax(rem(260), rem(400));
   gap: rem(10);
   align-items: flex-start;
   justify-content: space-between;
@@ -46,6 +46,15 @@
     &-accent {
       @include text-base;
       color: $gray;
+    }
+  }
+
+  @media (max-width: rem(1024)) {
+    grid-template-columns: 1fr;
+    gap: rem(18);
+
+    &__details-text {
+      max-width: 100%;
     }
   }
 }
