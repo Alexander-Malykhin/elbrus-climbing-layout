@@ -21,35 +21,36 @@
   $gap: rem(4),
   $bar-1: rem(11),
   $bar-2: rem(20),
-  $bar-3: rem(28)
+  $bar-3: rem(28),
+  $item-selector: '.rating-bars__item'
 ) {
   display: flex;
   align-items: flex-end;
   gap: $gap;
   height: $height;
 
-  span {
+  #{$item-selector} {
     display: block;
     width: $bar-width;
     border: rem(1) solid $color;
     border-radius: rem(1.5);
   }
 
-  span:nth-child(1) {
+  #{$item-selector}:nth-child(1) {
     height: $bar-1;
   }
 
-  span:nth-child(2) {
+  #{$item-selector}:nth-child(2) {
     height: $bar-2;
   }
 
-  span:nth-child(3) {
+  #{$item-selector}:nth-child(3) {
     height: $bar-3;
   }
 
-  &.is-level-1 span:nth-child(-n + 1),
-  &.is-level-2 span:nth-child(-n + 2),
-  &.is-level-3 span:nth-child(-n + 3) {
+  &.is-level-1 #{$item-selector}:nth-child(-n + 1),
+  &.is-level-2 #{$item-selector}:nth-child(-n + 2),
+  &.is-level-3 #{$item-selector}:nth-child(-n + 3) {
     background-color: $color;
   }
 }

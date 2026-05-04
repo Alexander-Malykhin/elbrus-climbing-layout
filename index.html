@@ -30,9 +30,9 @@
                 <div class="header-top__actions">
                     <div class="header-top__currency">
                         <select class="header-top__currency-select" name="currency" aria-label="Выбор валюты">
-                            <option value="usd">USD</option>
-                            <option value="eur">EUR</option>
-                            <option value="rub">RUB</option>
+                            <option value="usd" class="header-top__currency-option">USD</option>
+                            <option value="eur" class="header-top__currency-option">EUR</option>
+                            <option value="rub" class="header-top__currency-option">RUB</option>
                         </select>
                     </div>
 
@@ -141,9 +141,9 @@
 
                 <div class="header-bottom__stat">
                     <div class="header-bottom__rating is-level-1">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
                     </div>
                     <div class="header-bottom__label-desktop">Сложность</div>
 
@@ -153,9 +153,9 @@
 
                 <div class="header-bottom__stat">
                     <div class="header-bottom__rating is-level-2">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
                     </div>
                     <div class="header-bottom__label-desktop">Комфорт</div>
 
@@ -479,7 +479,7 @@
                                 <div class="cost-top__old-price">110 000 ₽</div>
 
                                 <div class="cost-top__price">
-                                    <span>от</span> 78 000 ₽
+                                    <span class="cost-top__price-prefix">от</span> 78 000 ₽
                                 </div>
 
                                 <div class="cost-top__note">
@@ -492,13 +492,13 @@
 
                             <div class="cost-top__bottom">
                                 <div class="cost-top__booking">
-                                    Для <span>бронирования</span> достаточно<br>
-                                    <b>25 000 ₽</b>
+                                    Для <span class="cost-top__booking-accent">бронирования</span> достаточно<br>
+                                    <b class="cost-top__booking-strong">25 000 ₽</b>
                                 </div>
 
                                 <a href="#" class="cost-top__cancel">
-                                    <img src="./images/assets/info-alt.svg" alt="">
-                                    <span>Условия отмены</span>
+                                    <img src="./images/assets/info-alt.svg" alt="" class="cost-top__cancel-icon">
+                                    <span class="cost-top__cancel-text">Условия отмены</span>
                                 </a>
                             </div>
                         </article>
@@ -533,7 +533,7 @@
                             <div class="cost-top__bottom">
                                 <div class="cost-top__booking">
                                     Для заказа<br>
-                                    <span>свяжитесь с менеджером</span>
+                                    <span class="cost-top__booking-accent">свяжитесь с менеджером</span>
                                 </div>
                             </div>
                         </article>
@@ -888,40 +888,40 @@
                     <div class="more__slider">
                         <article class="more-card">
                             <div class="more-card__image">
-                                <img src="/images/tours/tour-1.png" alt="">
+                                <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
                                 <div class="more-card__tags">
-                                    <span>Россия</span>
-                                    <span>Восхождение</span>
+                                    <span class="more-card__tag">Россия</span>
+                                    <span class="more-card__tag">Восхождение</span>
                                 </div>
                                 <h3 class="more-card__title">Эльбрус с юга</h3>
                             </div>
 
                             <div class="more-card__body">
                                 <div class="more-card__stats">
-                                    <div><b>9</b><span>дней</span></div>
-                                    <div><b>25</b><span>km</span></div>
+                                    <div class="more-card__stat"><b class="more-card__stat-value">9</b><span class="more-card__stat-label">дней</span></div>
+                                    <div class="more-card__stat"><b class="more-card__stat-value">25</b><span class="more-card__stat-label">km</span></div>
                                     <div class="more-card__rating">
                                         <div class="more-card__bars is-level-2">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
                                         </div>
-                                        <span>сложность</span>
+                                        <span class="more-card__rating-label">сложность</span>
                                     </div>
 
                                     <div class="more-card__rating">
                                         <div class="more-card__bars is-level-3">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
                                         </div>
-                                        <span>комфорт</span>
+                                        <span class="more-card__rating-label">комфорт</span>
                                     </div>
                                 </div>
 
                                 <div class="more-card__info">
-                                    <p>10.05.2026,<br>ещё 29 туров<br>и под заказ</p>
-                                    <p>до 08.05.2026<br><span>€1 650</span><br>от <b>€1 130</b></p>
+                                    <p class="more-card__info-text">10.05.2026,<br>ещё 29 туров<br>и под заказ</p>
+                                    <p class="more-card__info-text more-card__info-text--align-right">до 08.05.2026<br><span class="more-card__price-old">€1 650</span><br>от <b class="more-card__price-current">€1 130</b></p>
                                 </div>
 
                                 <div class="more-card__actions">
@@ -933,40 +933,40 @@
 
                         <article class="more-card">
                             <div class="more-card__image">
-                                <img src="/images/tours/tour-1.png" alt="">
+                                <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
                                 <div class="more-card__tags">
-                                    <span>Россия</span>
-                                    <span>Восхождение</span>
+                                    <span class="more-card__tag">Россия</span>
+                                    <span class="more-card__tag">Восхождение</span>
                                 </div>
                                 <h3 class="more-card__title">Траверс Эльбруса с севера на юг</h3>
                             </div>
 
                             <div class="more-card__body">
                                 <div class="more-card__stats">
-                                    <div><b>9</b><span>дней</span></div>
-                                    <div><b>34</b><span>km</span></div>
+                                    <div class="more-card__stat"><b class="more-card__stat-value">9</b><span class="more-card__stat-label">дней</span></div>
+                                    <div class="more-card__stat"><b class="more-card__stat-value">34</b><span class="more-card__stat-label">km</span></div>
                                     <div class="more-card__rating">
                                         <div class="more-card__bars is-level-2">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
                                         </div>
-                                        <span>сложность</span>
+                                        <span class="more-card__rating-label">сложность</span>
                                     </div>
 
                                     <div class="more-card__rating">
                                         <div class="more-card__bars is-level-3">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
                                         </div>
-                                        <span>комфорт</span>
+                                        <span class="more-card__rating-label">комфорт</span>
                                     </div>
                                 </div>
 
                                 <div class="more-card__info">
-                                    <p>30.05.2026,<br>ещё 4 тура<br>и под заказ</p>
-                                    <p>до 08.05.2026<br><span>€3 390</span><br>от <b>€2 100</b></p>
+                                    <p class="more-card__info-text">30.05.2026,<br>ещё 4 тура<br>и под заказ</p>
+                                    <p class="more-card__info-text more-card__info-text--align-right">до 08.05.2026<br><span class="more-card__price-old">€3 390</span><br>от <b class="more-card__price-current">€2 100</b></p>
                                 </div>
 
                                 <div class="more-card__actions">
@@ -978,48 +978,48 @@
 
                         <article class="more-card">
                             <div class="more-card__image">
-                                <img src="/images/tours/tour-1.png" alt="">
+                                <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
                                 <div class="more-card__tags">
-                                    <span>Россия</span>
-                                    <span>Восхождение</span>
+                                    <span class="more-card__tag">Россия</span>
+                                    <span class="more-card__tag">Восхождение</span>
                                 </div>
                                 <h3 class="more-card__title">Эльбрус с кислородом за 1 день</h3>
                             </div>
 
                             <div class="more-card__body">
                                 <div class="more-card__stats">
-                                    <div>
-                                        <b>3</b>
-                                        <span>дня</span>
+                                    <div class="more-card__stat">
+                                        <b class="more-card__stat-value">3</b>
+                                        <span class="more-card__stat-label">дня</span>
                                     </div>
 
-                                    <div>
-                                        <b>5</b>
-                                        <span>km</span>
+                                    <div class="more-card__stat">
+                                        <b class="more-card__stat-value">5</b>
+                                        <span class="more-card__stat-label">km</span>
                                     </div>
 
                                     <div class="more-card__rating">
                                         <div class="more-card__bars is-level-1">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
                                         </div>
-                                        <span>сложность</span>
+                                        <span class="more-card__rating-label">сложность</span>
                                     </div>
 
                                     <div class="more-card__rating">
                                         <div class="more-card__bars is-level-3">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
+                                            <span class="rating-bars__item"></span>
                                         </div>
-                                        <span>комфорт</span>
+                                        <span class="more-card__rating-label">комфорт</span>
                                     </div>
                                 </div>
 
                                 <div class="more-card__info">
-                                    <p>Только под заказ</p>
-                                    <p><b>€1 900</b></p>
+                                    <p class="more-card__info-text">Только под заказ</p>
+                                    <p class="more-card__info-text more-card__info-text--align-right"><b class="more-card__price-current">€1 900</b></p>
                                 </div>
 
                                 <div class="more-card__actions">
@@ -1039,7 +1039,7 @@
         <div class="container">
             <div class="footer__content">
                 <a href="#" class="footer__logo">
-                    <img src="/images/logo/logo-white.svg" alt="Elbrus Climbing">
+                    <img src="/images/logo/logo-white.svg" alt="Elbrus Climbing" class="footer__logo-image">
                 </a>
 
                 <div class="footer__ratings">
@@ -1079,10 +1079,10 @@
                 </div>
 
                 <div class="footer__payments">
-                    <img src="/images/payments/visa.svg" alt="">
-                    <img src="/images/payments/mastercard.svg" alt="">
-                    <img src="/images/payments/paypal.svg" alt="">
-                    <img src="/images/payments/crypto.svg" alt="">
+                    <img class="footer__payment-icon" src="/images/payments/visa.svg" alt="">
+                    <img class="footer__payment-icon" src="/images/payments/mastercard.svg" alt="">
+                    <img class="footer__payment-icon" src="/images/payments/paypal.svg" alt="">
+                    <img class="footer__payment-icon" src="/images/payments/crypto.svg" alt="">
                 </div>
 
                 <a href="#" class="footer__privacy">Политика конфиденциальности</a>

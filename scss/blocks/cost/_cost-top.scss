@@ -74,7 +74,7 @@
     color: $main-green;
     line-height: 1.1;
 
-    span {
+    &-prefix {
       @include text-base;
 
       color: $gray;
@@ -116,12 +116,12 @@
     color: $black;
     line-height: 1.35;
 
-    span,
-    b {
+    &-accent,
+    &-strong {
       font-weight: $fw-bold;
     }
 
-    span {
+    &-accent {
       color: $main-green;
     }
   }
@@ -137,7 +137,7 @@
     color: $main-green;
     text-decoration: none;
 
-    img {
+    &-icon {
       width: rem(20);
       height: rem(20);
       flex: 0 0 rem(20);
