@@ -1,0 +1,101 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.information-top {
+  @include layout-list;
+
+  &__item {
+    width: 100%;
+    background: $white;
+    box-shadow: 0 1.25rem 2.8125rem rgba($black, 0.08);
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) rem(24);
+    column-gap: rem(24);
+    align-items: center;
+    min-height: rem(50);
+    padding: 0 rem(24);
+  }
+
+  &__title {
+    @include title-md;
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding: 0 rem(24) rem(16);
+  }
+
+  &__text {
+    @include text-base;
+  }
+
+  &__arrow {
+    width: rem(24);
+    height: rem(24);
+    justify-self: center;
+    border: 0;
+    background: none;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(8);
+    height: rem(8);
+    border-right: rem(1) solid $red;
+    border-bottom: rem(1) solid $red;
+    transform: translate(-50%, -65%) rotate(45deg);
+  }
+
+  &__item--active &__arrow::before {
+    transform: translate(-50%, -35%) rotate(-135deg);
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(1130);
+  }
+
+  &__service {
+    display: grid;
+    grid-template-columns: rem(80) rem(180) minmax(0, rem(740));
+    column-gap: rem(28);
+    align-items: start;
+    padding: rem(10) 0;
+    border-bottom: rem(1) solid rgba($gray, 0.25);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__service-price,
+  &__service-name,
+  &__service-text {
+    @include text-base;
+  }
+
+  &__service-text {
+    color: $gray;
+  }
+
+  &__service-text {
+    color: $gray;
+  }
+}

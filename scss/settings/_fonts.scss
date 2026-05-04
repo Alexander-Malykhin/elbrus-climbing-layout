@@ -82,6 +82,11 @@ $fw-extra-bold: 800;
   @include fz-24($fw-semi-bold);
 }
 
+@mixin title-guide {
+  @include fz-20($fw-regular);
+}
+
+
 @mixin title-md {
   @include fz-16($fw-semi-bold);
 }

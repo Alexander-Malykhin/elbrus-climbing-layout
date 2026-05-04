@@ -53,3 +53,9 @@
     background-color: $color;
   }
 }
+
+@mixin layout-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(6);
+}

@@ -26,6 +26,16 @@
 @use './blocks/itinerary/index' as itinerary;
 //cost
 @use './blocks/cost/index' as cost;
+//departures
+@use './blocks/departures' as departures;
+//departures
+@use './blocks/information' as information;
+//reviews
+@use './blocks/reviews' as reviews;
+//more
+@use './blocks/more' as more;
+//footer
+@use './blocks/footer' as footer;
 
 body {
   font-family: $ff-inter;

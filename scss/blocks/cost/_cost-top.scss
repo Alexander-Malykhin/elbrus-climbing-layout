@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: repeat(2, rem(430));
   justify-content: center;
-  gap: rem(18);
+  gap: rem(20);
 
   &__card {
     min-height: rem(442);

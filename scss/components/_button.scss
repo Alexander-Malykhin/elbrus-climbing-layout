@@ -6,7 +6,7 @@
 .button {
   @include fz-16($fw-regular);
 
-  padding: rem(10.5) rem(29.5);
+  padding: clamp(rem(9), 1vw, rem(10.5)) clamp(rem(16), 1vw, rem(29.5));
   background-color: $main-green;
   color: $white;
   border-radius: rem(4);

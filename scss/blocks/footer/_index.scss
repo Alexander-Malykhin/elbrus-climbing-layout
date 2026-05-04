@@ -1,0 +1,148 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+@use '../../settings/containers' as *;
+
+.footer {
+  background: #222;
+  color: $white;
+  padding: rem(42) 0 rem(18);
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+      "logo rating right"
+      "payments privacy social";
+    align-items: start;
+    gap: rem(82) rem(40);
+  }
+
+  &__logo {
+    grid-area: logo;
+    display: block;
+    width: rem(116);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__ratings {
+    grid-area: rating;
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    color: $white;
+  }
+
+  &__rating-icon {
+    display: block;
+    width: rem(28);
+    height: rem(28);
+    object-fit: contain;
+  }
+
+  &__rating-value {
+    font-weight: 700;
+  }
+
+  &__stars {
+    color: #ffb800;
+    letter-spacing: rem(1);
+  }
+
+  &__rating-count {
+    color: rgba($white, 0.85);
+  }
+
+  &__right {
+    grid-area: right;
+    justify-self: end;
+    text-align: right;
+  }
+
+  &__company {
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(14);
+    margin-top: rem(28);
+  }
+
+  &__button,
+  &__select {
+    height: rem(22);
+    padding: 0 rem(12);
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+    background: transparent;
+    color: $white;
+    font-size: rem(12);
+    cursor: pointer;
+  }
+
+  &__select {
+    min-width: rem(62);
+    position: relative;
+  }
+
+  &__payments {
+    grid-area: payments;
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    img {
+      display: block;
+      height: auto;
+      width: rem(42);
+      object-fit: cover;
+    }
+  }
+
+  &__privacy {
+    grid-area: privacy;
+    align-self: end;
+    justify-self: center;
+    color: rgba($white, 0.7);
+    font-weight: 700;
+  }
+
+  &__socials {
+    grid-area: social;
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(28);
+    height: rem(28);
+
+    &-icon {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}

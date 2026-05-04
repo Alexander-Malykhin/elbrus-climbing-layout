@@ -1,0 +1,22 @@
+@use 'information-top';
+@use 'information-bottom';
+
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.information {
+  &__title {
+    @include title-lg;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: rem(1040);
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(80);
+  }
+}

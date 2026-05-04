@@ -1,0 +1,170 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+@use '../../settings/containers' as *;
+
+.departures {
+  &__title {
+    @include title-lg;
+  }
+
+  &__content {
+    max-width: rem($w_1240);
+    margin: 0 auto;
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+  }
+
+  &__head,
+  &__item {
+    display: grid;
+    grid-template-columns:
+    minmax(rem(120), 0.8fr)
+    minmax(rem(260), 2.4fr)
+    minmax(rem(110), 1fr)
+    minmax(rem(100), 0.8fr)
+    minmax(rem(140), 1fr);
+    column-gap: clamp(rem(12), 2vw, rem(24));
+    align-items: center;
+    padding: 0 clamp(rem(24), 2vw, rem(23));
+    background: $white;
+    box-shadow: 0 1.25rem 2.8125rem rgba($black, 0.08);
+  }
+
+  &__head {
+    min-height: rem(80);
+    font-weight: 700;
+    color: $black;
+
+    &-title {
+      @include title-md;
+
+      &:nth-child(2)
+      {
+        padding-left: rem(80);
+      }
+
+      &:nth-child(3)
+      {
+        text-align: center;
+      }
+    }
+  }
+
+  &__item {
+    min-height: rem(150);
+  }
+
+  &__date {
+    @include text-base;
+  }
+
+  &__guide {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(18);
+  }
+
+  &__avatar {
+    width: rem(62);
+    height: rem(62);
+    flex: 0 0 rem(62);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__guide-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__guide-name {
+    @include title-guide;
+    color: $main-green;
+  }
+
+  &__guide-position {
+    @include text-base;
+    margin-top: rem(4);
+  }
+
+  &__countries {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(5);
+    margin-top: rem(22);
+    font-size: rem(14);
+    line-height: 1.05;
+
+    img {
+      width: rem(22);
+      height: rem(16);
+      object-fit: cover;
+    }
+  }
+
+  &__places {
+    @include text-base;
+    text-align: center;
+  }
+
+  &__price {
+    @include text-base;
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+  }
+
+  &__price-old {
+    color: $gray;
+    text-decoration: line-through;
+    text-decoration-color: $red;
+  }
+
+  &__price-current {
+    font-weight: 700;
+  }
+
+  &__price-date {
+    color: $gray;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: rem(100);
+    margin-top: rem(4);
+    background: $white;
+    box-shadow: 0 1.25rem 2.8125rem rgba($black, 0.08);
+  }
+
+  &__more-button {
+    @include text-base;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(14);
+    border: 0;
+    background: none;
+    color: $main-green;
+    cursor: pointer;
+  }
+
+  &__more-arrow {
+    width: rem(9);
+    height: rem(9);
+    border-right: rem(1) solid $main-green;
+    border-bottom: rem(1) solid $main-green;
+    transform: rotate(45deg) translateY(rem(-2));
+  }
+}
