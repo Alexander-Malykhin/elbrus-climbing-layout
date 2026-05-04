@@ -24,7 +24,7 @@
     display: block;
     width: rem(116);
 
-    img {
+    &-image {
       display: block;
       width: 100%;
       height: auto;
@@ -106,7 +106,7 @@
     align-items: center;
     gap: rem(8);
 
-    img {
+    .footer__payment-icon {
       display: block;
       height: auto;
       width: rem(42);

@@ -139,7 +139,7 @@
 
     @include fz-12($fw-regular);
 
-    option {
+    .header-top__currency-option {
       color: $main-green;
       background: $white;
     }
