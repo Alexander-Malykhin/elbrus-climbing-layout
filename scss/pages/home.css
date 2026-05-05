@@ -1,0 +1,55 @@
+/* HERO */
+.home-hero {
+  background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url('/images/bg.png') center/cover no-repeat;
+  color:#fff;
+  padding-bottom:40px;
+}
+
+.home-hero__top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.home-hero__panel {display:flex;gap:20px;align-items:center;}
+.home-hero__nav-link {color:#fff;opacity:.9}
+.home-hero__callback {color:#4DD2A3}
+
+.home-hero__title {font-size:42px;font-weight:700;margin-top:60px}
+.home-hero__routes {margin-top:10px;opacity:.9}
+
+.home-hero__content {display:flex;justify-content:space-between;align-items:flex-start}
+.home-hero__messengers {display:flex;flex-direction:column;gap:16px;align-items:center}
+
+/* SECTION */
+.home-section {padding:40px 0}
+.home-section__head {margin-bottom:20px}
+.home-section__line {width:60px;height:2px;background:#FF0002;margin-bottom:10px}
+
+/* CAROUSEL */
+.route-carousel {position:relative}
+.route-carousel__track {display:flex;gap:20px;overflow:auto;padding:10px 0}
+.route-carousel__arrow {position:absolute;top:50%;transform:translateY(-50%);border:1px solid #FF0002;border-radius:50%;width:40px;height:40px;background:#fff}
+.route-carousel__arrow--prev {left:-20px}
+.route-carousel__arrow--next {right:-20px}
+
+/* TOUR CARD EXTENDED */
+.tour-card--route {min-width:280px}
+.tour-card__media {position:relative}
+.tour-card__badges {position:absolute;top:10px;left:10px;display:flex;gap:6px}
+.tour-card__badge {background:#fff;padding:4px 8px;border-radius:4px;font-size:12px}
+.tour-card__title {position:absolute;bottom:10px;left:10px;color:#fff}
+
+.tour-card__body {padding:14px}
+.tour-card__stats {display:flex;gap:10px;font-size:12px;color:#7E869A}
+.tour-card__info {display:flex;justify-content:space-between;margin-top:10px}
+.tour-card__price span {text-decoration:line-through;color:red}
+.tour-card__actions {display:flex;justify-content:space-between;margin-top:10px}
+
+/* CALENDAR */
+.calendar-list {display:flex;flex-direction:column;gap:12px}
+.calendar-card--tour {display:grid;grid-template-columns:140px 1fr 200px 80px 260px;align-items:center;gap:20px}
+.calendar-card__tour {display:flex;gap:12px;align-items:center}
+.calendar-card__price span {text-decoration:line-through;color:red}
+.calendar-card__button {margin-left:10px}
