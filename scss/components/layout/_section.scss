@@ -1,0 +1,12 @@
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+
+.section {
+  background-color: $white;
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+}

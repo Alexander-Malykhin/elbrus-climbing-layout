@@ -1,0 +1,6 @@
+@use '../../settings/fonts' as *;
+
+.section-heading {
+  @include title-xm;
+  line-height: 1.2;
+}
