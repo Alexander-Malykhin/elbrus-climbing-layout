@@ -14,7 +14,7 @@
 
   &__stats {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: rem(48);
   }
 
@@ -79,7 +79,7 @@
 
     &__value-desktop,
     &__label-desktop,
-    .rating-bars {
+    .rating-bars__item {
       display: none;
     }
 
@@ -99,6 +99,21 @@
   }
 
   @media (max-width: rem(700)) {
-    display: none;
+    &__information {
+      display: none;
+    }
+
+    &__stats {
+      justify-content: space-between;
+      width: 100%;
+      height: rem(30);
+      gap: rem(1);
+    }
+
+    &__value-mobile,
+    &__label-mobile {
+      display: block;
+      color: $gray;
+    }
   }
 }

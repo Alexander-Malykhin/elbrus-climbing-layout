@@ -16,6 +16,8 @@
 
 //header
 @use './blocks/header/index' as header;
+//footer
+@use './blocks/tour-date' as tour;
 //program
 @use './blocks/program/index' as program;
 //features
@@ -62,4 +64,15 @@ body {
     flex-direction: column;
     gap: rem(24);
   }
+}
+
+@media (max-width: rem(800)) {
+  .container {
+    width: min(100% - rem(33), rem($w_754));
+  }
+
+  .main {
+    gap: rem(35);
+  }
+
 }

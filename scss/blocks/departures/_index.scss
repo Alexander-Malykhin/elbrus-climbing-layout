@@ -168,33 +168,127 @@
     transform: rotate(45deg) translateY(rem(-2));
   }
 
-  @media (max-width: rem(900)) {
-    &__head {
+  @media (max-width: rem(840)) and (min-width: rem(701)) {
+    display: none;
+  }
+
+  @media (max-width: rem(700)) {
+    display: block;
+
+    &__content {
+      max-width: none;
+      margin: 0;
+    }
+
+    &__table {
+      display: flex;
+      flex-direction: row;
+      gap: rem(10);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: rem(20) 0 rem(30);
+
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__head,
+    &__more {
       display: none;
     }
 
     &__item {
-      grid-template-columns: 1fr;
-      gap: rem(10);
-      min-height: auto;
-      padding: rem(16);
+      flex: 0 0 min(rem(304), calc(100vw - #{rem(64)}));
+      width: min(rem(304), calc(100vw - #{rem(64)}));
+      max-width: rem(304);
+      min-height: rem(407);
+      padding: rem(28) rem(18) rem(18);
+      scroll-snap-align: start;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "date date"
+      "price places"
+      "guide guide"
+      "action action";
+      align-content: start;
+      gap: rem(18) rem(12);
+
+      box-shadow: 0 rem(16) rem(35) rgba($black, 0.1);
     }
 
-    &__guide {
-      order: 3;
-    }
-
-    &__places {
-      text-align: left;
-      color: $gray;
+    &__date {
+      grid-area: date;
+      text-align: center;
+      font-size: rem(18);
+      font-weight: 700;
+      line-height: 1.25;
     }
 
     &__price {
-      align-items: flex-start;
+      grid-area: price;
+      font-size: rem(14);
+      gap: rem(4);
+    }
+
+    &__price-current {
+      font-size: rem(20);
+    }
+
+    &__places {
+      grid-area: places;
+      justify-self: end;
+      text-align: right;
+      font-size: rem(14);
+      line-height: 1.35;
+      color: $gray;
+    }
+
+    &__guide {
+      grid-area: guide;
+      display: grid;
+      grid-template-columns: rem(58) 1fr;
+      column-gap: rem(14);
+      align-items: start;
+      padding-top: rem(18);
+      border-top: rem(1) solid rgba($gray, 0.25);
+    }
+
+    &__avatar {
+      width: rem(58);
+      height: rem(58);
+      flex: 0 0 rem(58);
+    }
+
+    &__guide-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__guide-name {
+      font-size: rem(18);
+      line-height: 1.15;
+    }
+
+    &__guide-position {
+      font-size: rem(13);
+      line-height: 1.3;
+      margin-top: rem(4);
+    }
+
+    &__countries {
+      margin-top: rem(16);
+      font-size: rem(12);
     }
 
     &__action {
+      grid-area: action;
       justify-content: stretch;
+      margin-top: auto;
 
       .button {
         width: 100%;

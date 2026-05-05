@@ -145,4 +145,107 @@
       object-fit: contain;
     }
   }
+
+  @media (max-width: rem(700)) {
+    padding: rem(38) 0 rem(28);
+
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "logo right"
+      "rating rating"
+      "controls controls"
+      "payments social"
+      "privacy privacy";
+      gap: rem(34) rem(18);
+      width: 100%;
+      min-width: 0;
+    }
+
+    &__logo {
+      width: rem(88);
+    }
+
+    &__right {
+      justify-self: end;
+      text-align: right;
+      min-width: 0;
+    }
+
+    &__company {
+      font-size: rem(12);
+      line-height: 1.35;
+    }
+
+    &__rating:not(:first-child) {
+      display: none;
+    }
+
+    &__rating {
+      font-size: rem(22);
+      gap: rem(8);
+      min-width: 0;
+    }
+
+    &__rating-icon {
+      width: rem(32);
+      height: rem(32);
+      flex: 0 0 rem(32);
+    }
+
+    &__stars {
+      font-size: rem(18);
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    &__controls {
+      display: grid;
+      grid-template-columns: rem(62) rem(62) rem(96);
+      justify-content: space-between;
+      gap: rem(8);
+      margin-top: 0;
+      width: 100%;
+      min-width: 0;
+    }
+
+    &__button,
+    &__select {
+      width: 100%;
+      min-width: 0;
+      height: rem(23);
+      font-size: rem(12);
+      padding: 0 rem(8);
+    }
+
+    &__payments {
+      justify-content: flex-start;
+      gap: rem(8);
+      flex-wrap: wrap;
+      min-width: 0;
+
+      .footer__payment-icon {
+        width: rem(36);
+      }
+    }
+
+    &__socials {
+      justify-self: end;
+      gap: rem(12);
+      min-width: 0;
+    }
+
+    &__social {
+      width: rem(34);
+      height: rem(34);
+    }
+
+    &__privacy {
+      justify-self: start;
+      max-width: 100%;
+      font-size: rem(16);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+  }
 }

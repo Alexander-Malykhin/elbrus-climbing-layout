@@ -28,3 +28,9 @@
     }
   }
 }
+
+@media (max-width: rem(700)) {
+  .tour-navigation {
+    display: none;
+  }
+}

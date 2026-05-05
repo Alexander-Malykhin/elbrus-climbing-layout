@@ -1,0 +1,86 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.tour-date {
+  display: none;
+}
+
+@media (max-width: rem(800)) {
+  .tour-date {
+    display: block;
+  }
+
+  .tour-date__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(48);
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .tour-date__inner::before {
+    content: "";
+    order: 2;
+    width: 1px;
+    height: rem(76);
+    background-color: #e2e2e2;
+    flex-shrink: 0;
+  }
+
+  .tour-date__text {
+    @include text-base;
+    order: 1;
+    width: 50%;
+  }
+
+  .tour-date__accent {
+    @include green-accent;
+  }
+
+  .tour-date__price {
+    @include text-base;
+    order: 3;
+    width: 50%;
+    text-align: right;
+  }
+
+  .tour-date__old-price {
+    text-decoration-line: line-through;
+    text-decoration-color: $red;
+    text-decoration-thickness: rem(2);
+  }
+
+  .tour-date__new-price {
+    @include title-lg;
+  }
+
+  @media (max-width: rem(700)) {
+    .tour-date__text {
+      @include text-base;
+    }
+    .tour-date__new-price {
+      @include text-base;
+    }
+  }
+
+
+  @media (max-width: rem(320)) {
+    .tour-date__inner {
+      display: none;
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+    .tour-date__text {
+      @include text-sm;
+      width: 100%;
+    }
+  }
+}

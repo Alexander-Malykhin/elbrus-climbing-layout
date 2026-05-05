@@ -48,4 +48,16 @@
       border-radius: rem(4);
     }
   }
+
+  @media (max-width: rem(840)) {
+    &__media {
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+
+      &--active {
+        display: none;
+      }
+    }
+  }
 }
