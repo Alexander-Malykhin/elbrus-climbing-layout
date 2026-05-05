@@ -149,4 +149,14 @@
       margin-bottom: 0;
     }
   }
+
+  @media (max-width: rem(900)) {
+    grid-template-columns: 1fr;
+    gap: rem(10);
+
+    &__card {
+      min-height: auto;
+      padding: rem(24) rem(18);
+    }
+  }
 }
