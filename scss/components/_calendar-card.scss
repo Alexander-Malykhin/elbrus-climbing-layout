@@ -1,0 +1,35 @@
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+
+.calendar-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(16);
+  border-radius: rem(8);
+  background: $white;
+  box-shadow: 0 rem(6) rem(16) rgba(0,0,0,0.06);
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__image {
+    width: rem(60);
+    height: rem(60);
+    border-radius: rem(6);
+    object-fit: cover;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+}
