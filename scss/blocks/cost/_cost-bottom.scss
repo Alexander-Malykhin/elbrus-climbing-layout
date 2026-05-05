@@ -71,4 +71,15 @@
   &__list--excluded &__line::before {
     color: $red;
   }
+
+  @media (max-width: rem(900)) {
+    grid-template-columns: 1fr;
+    gap: rem(10);
+
+    &__item {
+      padding: rem(10) rem(12);
+      background: $white;
+      box-shadow: 0 rem(8) rem(20) rgba($black, 0.06);
+    }
+  }
 }

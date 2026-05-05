@@ -167,4 +167,38 @@
     border-bottom: rem(1) solid $main-green;
     transform: rotate(45deg) translateY(rem(-2));
   }
+
+  @media (max-width: rem(900)) {
+    &__head {
+      display: none;
+    }
+
+    &__item {
+      grid-template-columns: 1fr;
+      gap: rem(10);
+      min-height: auto;
+      padding: rem(16);
+    }
+
+    &__guide {
+      order: 3;
+    }
+
+    &__places {
+      text-align: left;
+      color: $gray;
+    }
+
+    &__price {
+      align-items: flex-start;
+    }
+
+    &__action {
+      justify-content: stretch;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
 }

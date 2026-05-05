@@ -98,4 +98,22 @@
   &__service-text {
     color: $gray;
   }
+
+  @media (max-width: rem(900)) {
+    &__head {
+      min-height: rem(46);
+      padding: 0 rem(14);
+      column-gap: rem(10);
+    }
+
+    &__body {
+      padding: 0 rem(14) rem(12);
+    }
+
+    &__service {
+      grid-template-columns: 1fr;
+      gap: rem(2);
+      padding: rem(8) 0;
+    }
+  }
 }

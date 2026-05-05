@@ -19,4 +19,10 @@
     flex-direction: column;
     gap: rem(80);
   }
+
+  @media (max-width: rem(900)) {
+    &__content {
+      gap: rem(16);
+    }
+  }
 }

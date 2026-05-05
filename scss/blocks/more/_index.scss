@@ -77,6 +77,22 @@
       }
     }
   }
+
+  @media (max-width: rem(900)) {
+    &__content {
+      padding: rem(8) 0;
+    }
+
+    &__slider {
+      grid-auto-columns: minmax(rem(260), rem(300));
+      padding: rem(10) 0 rem(16);
+      margin: 0;
+    }
+
+    &__arrow {
+      display: none;
+    }
+  }
 }
 
 .more-card {
