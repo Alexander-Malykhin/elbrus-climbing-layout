@@ -1,0 +1,51 @@
+@use '../settings/colors' as *;
+@use '../settings/fonts' as *;
+@use '../settings/functions' as *;
+
+.page-header-lite {
+  padding: rem(16) 0;
+  background-color: $white;
+  border-bottom: rem(1) solid rgba($black, 0.08);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(24);
+  }
+
+  &__logo-link {
+    display: inline-flex;
+    width: rem(80);
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  &__icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24);
+    height: rem(24);
+    color: $black;
+  }
+
+  @media (max-width: rem(700)) {
+    padding: rem(10) 0;
+
+    &__logo-link {
+      width: rem(64);
+    }
+  }
+}
