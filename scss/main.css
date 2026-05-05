@@ -726,6 +726,14 @@ input[type=file] {
   color: #7E869A;
 }
 
+@media (max-width: 50rem) {
+  .program-top {
+    grid-template-columns: 1fr;
+  }
+  .program-top__details {
+    display: none;
+  }
+}
 .program-bottom {
   display: flex;
   align-items: flex-start;
@@ -885,6 +893,14 @@ input[type=file] {
   font-size: 2.5rem;
 }
 
+@media (max-width: 50rem) {
+  .trip-photos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trip-photos__item:nth-child(n+5) {
+    display: none;
+  }
+}
 .itinerary__content {
   max-width: 65rem;
   margin: 0 auto;
@@ -1135,7 +1151,7 @@ input[type=file] {
 .cost-top__card:first-child .cost-top__price-box {
   margin-bottom: 0;
 }
-@media (max-width: 56.25rem) {
+@media (max-width: 50rem) {
   .cost-top {
     grid-template-columns: 1fr;
     gap: 0.625rem;

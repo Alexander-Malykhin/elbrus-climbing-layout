@@ -58,3 +58,15 @@
     font-size: rem(40);
   }
 }
+
+@media (max-width: rem(800)) {
+  .trip-photos {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item:nth-child(n+5) {
+      display: none;
+    }
+  }
+}
