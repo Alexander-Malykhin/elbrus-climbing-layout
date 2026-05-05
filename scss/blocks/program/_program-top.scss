@@ -49,3 +49,13 @@
     }
   }
 }
+
+@media (max-width: rem(800)) {
+  .program-top {
+    grid-template-columns: 1fr;
+
+    &__details {
+      display: none;
+    }
+  }
+}
