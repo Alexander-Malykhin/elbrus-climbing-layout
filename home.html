@@ -3,59 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Главная</title>
+  <title>Расписание предстоящих туров</title>
   <link rel="stylesheet" href="scss/main.css" />
+  <link rel="stylesheet" href="scss/pages/home.css" />
 </head>
-<body class="page">
+<body class="page page--home">
 
-<header class="page-header-lite">
-  <div class="container page-header-lite__inner">
-    <a href="#" class="page-header-lite__logo-link">
-      <img src="/images/logo/logo-black.svg" class="page-header-lite__logo" />
-    </a>
-    <div class="page-header-lite__actions">
-      <button class="page-header-lite__icon-button">≡</button>
+<header class="home-hero">
+  <div class="container home-hero__inner">
+    <div class="home-hero__top">
+      <a href="home.html" class="home-hero__logo-link" aria-label="Elbrus Climbing">
+        <img src="/images/logo/logo-white.svg" alt="Elbrus Climbing" class="home-hero__logo">
+      </a>
+
+      <div class="home-hero__panel">
+        <nav class="home-hero__nav" aria-label="Основная навигация">
+          <a href="#routes" class="home-hero__nav-link">Все туры</a>
+          <a href="tel:+442037699314" class="home-hero__nav-link">+44 20 3769 9314</a>
+        </nav>
+
+        <select class="home-hero__select" name="currency" aria-label="Выбор валюты">
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="rub">RUB</option>
+        </select>
+
+        <button class="home-hero__language" type="button">RU</button>
+        <button class="home-hero__callback" type="button">Заказать звонок</button>
+      </div>
+
+      <div class="home-hero__mobile-actions">
+        <button class="home-hero__chat" type="button" aria-label="Сообщения">
+          <img src="/images/chat/chat-white.svg" alt="">
+        </button>
+        <button class="burger home-hero__burger" type="button" aria-label="Меню">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="home-hero__content">
+      <div>
+        <h1 class="home-hero__title">Расписание предстоящих туров</h1>
+        <p class="home-hero__routes">Эльбрус | Казбек | Килиманджаро | Арарат | Пик Ленина | Аконкагуа | Непал</p>
+      </div>
+
+      <div class="home-hero__messengers">
+        <p class="home-hero__messengers-text">Мы на связи</p>
+        <a href="#" class="home-hero__messenger" aria-label="Messenger">
+          <img src="/images/messengers/telegram.svg" alt="">
+        </a>
+        <a href="#" class="home-hero__messenger" aria-label="WhatsApp">
+          <img src="/images/messengers/whatsapp.svg" alt="">
+        </a>
+      </div>
     </div>
   </div>
 </header>
 
-<main class="main">
-  <section class="section">
+<main class="home-main">
+  <section class="home-section" id="routes">
     <div class="container">
-      <h2>Все маршруты</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
-        <div class="tour-card">
-          <img src="/images/bg.png" class="tour-card__image" />
-          <div class="tour-card__content">
-            <div class="tour-card__title">Эльбрус с юга</div>
-            <div class="tour-card__meta">9 дней · 25 км</div>
-            <div class="tour-card__footer">
-              <span>€1 150</span>
-              <button class="button">Забронировать</button>
+      <div class="home-section__head">
+        <div class="home-section__line"></div>
+        <h2 class="home-section__title">Все маршруты</h2>
+      </div>
+
+      <div class="route-carousel" aria-label="Все маршруты">
+        <button class="route-carousel__arrow route-carousel__arrow--prev" type="button" aria-label="Назад">‹</button>
+
+        <div class="route-carousel__track">
+          <article class="tour-card tour-card--route">
+            <div class="tour-card__media">
+              <img src="/images/bg.png" alt="Эльбрус с юга" class="tour-card__image">
+              <div class="tour-card__badges">
+                <span class="tour-card__badge">Россия</span>
+                <span class="tour-card__badge">Восхождение</span>
+              </div>
+              <h3 class="tour-card__title">Эльбрус с юга</h3>
             </div>
-          </div>
+            <div class="tour-card__body">
+              <div class="tour-card__stats">
+                <span><b>9</b> дней</span>
+                <span><b>25</b> км</span>
+                <span>сложность</span>
+                <span>комфорт</span>
+              </div>
+              <div class="tour-card__info">
+                <p>10.05.2026,<br>ещё 29 туров<br>и под заказ</p>
+                <p class="tour-card__price"><span>€1 650</span><b>от €1 130</b></p>
+              </div>
+              <div class="tour-card__actions">
+                <a href="index.html" class="tour-card__details">Подробнее</a>
+                <button class="button tour-card__button">Забронировать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card tour-card--route">
+            <div class="tour-card__media">
+              <img src="/images/bg.png" alt="Траверс Эльбруса" class="tour-card__image">
+              <div class="tour-card__badges">
+                <span class="tour-card__badge">Россия</span>
+                <span class="tour-card__badge">Восхождение</span>
+              </div>
+              <h3 class="tour-card__title">Траверс Эльбруса с севера на юг</h3>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__stats">
+                <span><b>9</b> дней</span>
+                <span><b>34</b> км</span>
+                <span>сложность</span>
+                <span>комфорт</span>
+              </div>
+              <div class="tour-card__info">
+                <p>30.05.2026,<br>ещё 4 тура<br>и под заказ</p>
+                <p class="tour-card__price"><span>€2 900</span><b>от €2 100</b></p>
+              </div>
+              <div class="tour-card__actions">
+                <a href="index.html" class="tour-card__details">Подробнее</a>
+                <button class="button tour-card__button">Забронировать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card tour-card--route">
+            <div class="tour-card__media">
+              <img src="/images/photos/photo-1.png" alt="Восхождение на Эльбрус" class="tour-card__image">
+              <div class="tour-card__badges">
+                <span class="tour-card__badge">Россия</span>
+                <span class="tour-card__badge">Восхождение</span>
+              </div>
+              <h3 class="tour-card__title">Восхождение на Эльбрус с востока</h3>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__stats">
+                <span><b>11</b> дней</span>
+                <span><b>46</b> км</span>
+                <span>сложность</span>
+                <span>комфорт</span>
+              </div>
+              <div class="tour-card__info">
+                <p>01.07.2026,<br>ещё 1 тур<br>и под заказ</p>
+                <p class="tour-card__price"><span>€4 700</span><b>от €3 670</b></p>
+              </div>
+              <div class="tour-card__actions">
+                <a href="index.html" class="tour-card__details">Подробнее</a>
+                <button class="button tour-card__button">Забронировать</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card tour-card--route">
+            <div class="tour-card__media">
+              <img src="/images/photos/photo-2.png" alt="Казбек и Эльбрус" class="tour-card__image">
+              <div class="tour-card__badges">
+                <span class="tour-card__badge">Грузия</span>
+                <span class="tour-card__badge">Восхождение</span>
+              </div>
+              <h3 class="tour-card__title">Две вершины: Казбек с юга + Эльбрус</h3>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__stats">
+                <span><b>13</b> дней</span>
+                <span><b>55</b> км</span>
+                <span>сложность</span>
+                <span>комфорт</span>
+              </div>
+              <div class="tour-card__info">
+                <p>05.06.2026,<br>ещё 10 туров<br>и под заказ</p>
+                <p class="tour-card__price"><span>€1 850</span><b>от €1 490</b></p>
+              </div>
+              <div class="tour-card__actions">
+                <a href="index.html" class="tour-card__details">Подробнее</a>
+                <button class="button tour-card__button">Забронировать</button>
+              </div>
+            </div>
+          </article>
         </div>
+
+        <button class="route-carousel__arrow route-carousel__arrow--next" type="button" aria-label="Вперёд">›</button>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="home-section">
     <div class="container">
-      <h2>Календарь туров</h2>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="calendar-card">
-          <div class="calendar-card__left">
-            <img src="/images/bg.png" class="calendar-card__image" />
+      <div class="home-section__head">
+        <div class="home-section__line"></div>
+        <h2 class="home-section__title">Календарь туров</h2>
+      </div>
+
+      <div class="calendar-list">
+        <article class="calendar-card calendar-card--tour">
+          <div class="calendar-card__date">01.05.2026 -<br>09.05.2026</div>
+          <div class="calendar-card__tour">
+            <img src="/images/bg.png" alt="Эльбрус с юга" class="calendar-card__image">
             <div>
-              <div class="calendar-card__title">Эльбрус с юга</div>
-              <div>01.05.2026 - 09.05.2026</div>
+              <h3 class="calendar-card__title">Эльбрус с юга</h3>
+              <div class="calendar-card__stats">9 дней · 25 км · сложность · комфорт</div>
             </div>
           </div>
-          <div class="calendar-card__right">
-            <span>9 мест</span>
-            <button class="button">Забронировать</button>
+          <div class="calendar-card__status">Группа сейчас на маршруте</div>
+          <div class="calendar-card__places">—</div>
+          <div class="calendar-card__booking"></div>
+        </article>
+
+        <article class="calendar-card calendar-card--tour">
+          <div class="calendar-card__date">10.05.2026 -<br>18.05.2026</div>
+          <div class="calendar-card__tour">
+            <img src="/images/bg.png" alt="Эльбрус с юга" class="calendar-card__image">
+            <div>
+              <h3 class="calendar-card__title">Эльбрус с юга</h3>
+              <div class="calendar-card__stats">9 дней · 25 км · сложность · комфорт</div>
+            </div>
           </div>
-        </div>
+          <div class="calendar-card__status"></div>
+          <div class="calendar-card__places">9 мест</div>
+          <div class="calendar-card__booking">
+            <div class="calendar-card__price"><span>€1 650</span><b>€1 250</b><small>до 08.05.2026</small></div>
+            <button class="button calendar-card__button">Забронировать</button>
+          </div>
+        </article>
+
+        <article class="calendar-card calendar-card--tour">
+          <div class="calendar-card__date">22.05.2026 -<br>30.05.2026</div>
+          <div class="calendar-card__tour">
+            <img src="/images/bg.png" alt="Эльбрус с юга" class="calendar-card__image">
+            <div>
+              <h3 class="calendar-card__title">Эльбрус с юга</h3>
+              <div class="calendar-card__stats">9 дней · 25 км · сложность · комфорт</div>
+            </div>
+          </div>
+          <div class="calendar-card__status"></div>
+          <div class="calendar-card__places">6 мест</div>
+          <div class="calendar-card__booking">
+            <div class="calendar-card__price"><span>€1 650</span><b>€1 250</b><small>до 08.05.2026</small></div>
+            <button class="button calendar-card__button">Забронировать</button>
+          </div>
+        </article>
       </div>
     </div>
   </section>
