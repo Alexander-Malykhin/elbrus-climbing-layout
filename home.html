@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="scss/main.css" />
+</head>
+<body class="page">
+
+<header class="page-header-lite">
+  <div class="container page-header-lite__inner">
+    <a href="#" class="page-header-lite__logo-link">
+      <img src="/images/logo/logo-black.svg" class="page-header-lite__logo" />
+    </a>
+    <div class="page-header-lite__actions">
+      <button class="page-header-lite__icon-button">≡</button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="section">
+    <div class="container">
+      <h2>Все маршруты</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <div class="tour-card">
+          <img src="/images/bg.png" class="tour-card__image" />
+          <div class="tour-card__content">
+            <div class="tour-card__title">Эльбрус с юга</div>
+            <div class="tour-card__meta">9 дней · 25 км</div>
+            <div class="tour-card__footer">
+              <span>€1 150</span>
+              <button class="button">Забронировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Календарь туров</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="calendar-card">
+          <div class="calendar-card__left">
+            <img src="/images/bg.png" class="calendar-card__image" />
+            <div>
+              <div class="calendar-card__title">Эльбрус с юга</div>
+              <div>01.05.2026 - 09.05.2026</div>
+            </div>
+          </div>
+          <div class="calendar-card__right">
+            <span>9 мест</span>
+            <button class="button">Забронировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
