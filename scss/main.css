@@ -196,6 +196,23 @@ input[type=file] {
   background-color: #FF0002;
 }
 
+.section-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.section {
+  background-color: #FFFFFF;
+}
+.section__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .header-top {
   padding-top: 1.875rem;
   display: flex;
@@ -2404,7 +2421,7 @@ input[type=file] {
   }
 }
 
-body {
+.page {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
 }
@@ -2418,15 +2435,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4.375rem;
-}
-
-.section {
-  background-color: #FFFFFF;
-}
-.section__layout {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 @media (max-width: 50rem) {

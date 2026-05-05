@@ -13,6 +13,8 @@
 @use 'components/burger';
 @use 'components/navigation-tour';
 @use 'components/section-progress-bar';
+@use 'components/base/typography';
+@use 'components/layout/section';
 
 //header
 @use './blocks/header/index' as header;
@@ -39,7 +41,7 @@
 //footer
 @use './blocks/footer' as footer;
 
-body {
+.page {
   font-family: $ff-inter;
   font-size: 1rem;
 }
@@ -55,16 +57,6 @@ body {
   gap: rem(70);
 }
 
-
-.section {
-  background-color: $white;
-
-  &__layout {
-    display: flex;
-    flex-direction: column;
-    gap: rem(24);
-  }
-}
 
 @media (max-width: rem(800)) {
   .container {
