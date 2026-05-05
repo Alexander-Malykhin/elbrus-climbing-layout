@@ -16,6 +16,9 @@
 @use 'components/section-progress-bar';
 @use 'components/base/typography';
 @use 'components/layout/section';
+@use 'components/page-header-lite';
+@use 'components/tour-card';
+@use 'components/calendar-card';
 
 //header
 @use './blocks/header/index' as header;
