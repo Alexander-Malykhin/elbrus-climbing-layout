@@ -46,6 +46,9 @@
 @use './blocks/footer' as footer;
 
 .page {
-  font-family: $ff-inter;
-  font-size: 1rem;
+  margin: rem(80) 0;
+}
+
+.elements-visible {
+  opacity: 0;
 }
