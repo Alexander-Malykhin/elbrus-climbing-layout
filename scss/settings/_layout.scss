@@ -1,0 +1,51 @@
+@use 'functions' as *;
+@use 'containers' as *;
+
+$container-gutter: 33 !default;
+$section-gap: 70 !default;
+$section-gap-mobile: 35 !default;
+
+@mixin container($max-width: $w_1600, $gutter: $container-gutter) {
+  width: min(100% - #{rem($gutter)}, #{rem($max-width)});
+  margin-inline: auto;
+}
+
+@mixin vertical-stack($gap: $section-gap) {
+  display: flex;
+  flex-direction: column;
+  gap: rem($gap);
+}
+
+:root {
+  --container-max-width: #{rem($w_1600)};
+  --container-max-width-tablet: #{rem($w_754)};
+  --container-gutter: #{rem($container-gutter)};
+  --section-gap: #{rem($section-gap)};
+  --section-gap-mobile: #{rem($section-gap-mobile)};
+}
+
+.container,
+[data-container] {
+  width: min(100% - var(--container-gutter), var(--container-max-width));
+  margin-inline: auto;
+}
+
+.page,
+.app,
+#root {
+  min-width: 320px;
+}
+
+.main,
+[data-main] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+@media (max-width: rem(800)) {
+  :root {
+    --container-max-width: var(--container-max-width-tablet);
+    --section-gap: var(--section-gap-mobile);
+  }
+}
