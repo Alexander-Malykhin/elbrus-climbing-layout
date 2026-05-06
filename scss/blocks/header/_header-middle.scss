@@ -2,6 +2,7 @@
 @use '../../settings/colors' as *;
 @use '../../settings/functions' as *;
 @use '../../settings/mixins' as *;
+@use '../../settings/containers' as *;
 
 .header-middle {
   margin-top: clamp(rem(40), 8vw, rem(84));
@@ -116,7 +117,8 @@
     display: none;
   }
 
-  @media (max-width: rem(700)) {
+  //ADAPTIVE
+  @media (max-width: rem($w_700)) {
     grid-template-columns: 1fr;
     margin-top: rem(24);
     gap: rem(16);

@@ -6,7 +6,7 @@
     <title>Elbrus Climbing Layout</title>
     <link rel="stylesheet" href="scss/main.css"/>
 </head>
-<body class="page">
+<body>
 <!---HEADER--->
 <header class="header">
     <div class="container">
@@ -18,9 +18,105 @@
 
             <div class="header-top__panel">
                 <nav class="header-top__nav" aria-label="Основная навигация">
-                    <a href="#" class="header-top__nav-link header-top__nav-link--desktop-only">
-                        Все туры
-                    </a>
+                    <!---TOUR-LIST--->
+                    <div class="tour-all">
+                        <button class="tour-all__toggle js-tour-all-toggle" type="button">
+                            Все туры
+                        </button>
+
+                        <div class="tour-all__dropdown">
+                            <ul class="tour-all__categories">
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="elbrus">
+                                        Эльбрус
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="kazbek">
+                                        Казбек
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="lenin">
+                                        Пик Ленина
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="nepal">
+                                        Непал
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="kilimanjaro">
+                                        Килиманджаро
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="ararat">
+                                        Арарат
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+
+                                <li class="tour-all__item">
+                                    <button class="tour-all__category js-tour-all-category" type="button" data-menu="thailand">
+                                        Таиланд
+                                        <span class="tour-all__category-arrow"></span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="tour-all__content">
+                                <ul class="tour-all__list" data-content="elbrus">
+                                    <li><a href="#">Эльбрус с юга</a></li>
+                                    <li><a href="#">Траверс Эльбруса с севера на юг</a></li>
+                                    <li><a href="#">Восхождение на Эльбрус с востока</a></li>
+                                    <li><a href="#">Две вершины: Казбек с юга + Эльбрус</a></li>
+                                    <li><a href="#">Эльбрус с кислородом за 1 день</a></li>
+                                    <li><a href="#">Зимний тур на Эльбрус</a></li>
+                                </ul>
+
+                                <ul class="tour-all__list" data-content="kazbek">
+                                    <li><a href="#">Казбек с юга</a></li>
+                                    <li><a href="#">Казбек с севера</a></li>
+                                </ul>
+
+                                <ul class="tour-all__list" data-content="lenin">
+                                    <li><a href="#">Пик Ленина классика</a></li>
+                                    <li><a href="#">Пик Ленина с гидом</a></li>
+                                </ul>
+
+                                <ul class="tour-all__list" data-content="nepal">
+                                    <li><a href="#">Треккинг к Эвересту</a></li>
+                                    <li><a href="#">Аннапурна</a></li>
+                                </ul>
+
+                                <ul class="tour-all__list" data-content="kilimanjaro">
+                                    <li><a href="#">Восхождение на Килиманджаро (Марангу)</a></li>
+                                    <li><a href="#">Восхождение на Килиманджаро (Мачаме)</a></li>
+                                    <li><a href="#">Килиманджаро, маршрут Лемошо</a></li>
+                                </ul>
+
+                                <ul class="tour-all__list" data-content="ararat">
+                                    <li><a href="#">Арарат классика</a></li>
+                                </ul>
+
+                                <ul class="tour-all__list" data-content="thailand">
+                                    <li><a href="#">Тур в Таиланд</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                     <a href="tel:+74951087465" class="header-top__nav-link header-top__nav-link--phone">
                         +7 495 108 74 65
@@ -47,9 +143,7 @@
 
                 <div class="header-top__mobile-actions">
                     <button class="header-top__icon-button" type="button" aria-label="Сообщения">
-                        <img src="/images/chat/chat-white.svg"
-                             alt=""
-                             class="header-top__icon">
+                        <img src="/images/chat/chat-white.svg" alt="chat" class="header-top__icon">
                     </button>
 
                     <button class="burger" type="button" aria-label="Меню">
@@ -76,7 +170,6 @@
                 <button class="header-middle__play" type="button" aria-label="Смотреть видео">
                     <span class="header-middle__play-icon"></span>
                 </button>
-
             </div>
 
             <div class="header-middle__messengers">
@@ -84,37 +177,30 @@
                     Мы на связи:
                 </p>
 
-
                 <div class="header-middle__messengers-list">
                     <a href="#" class="header-middle__messenger-link" aria-label="WhatsApp">
-                        <img src="/images/messengers/whatsapp.svg" alt="" class="header-middle__messenger-icon">
+                        <img src="/images/messengers/whatsapp.svg" alt="whatsapp" class="header-middle__messenger-icon">
                     </a>
 
                     <a href="#" class="header-middle__messenger-link" aria-label="Telegram">
-                        <img src="/images/messengers/telegram.svg" alt="" class="header-middle__messenger-icon">
+                        <img src="/images/messengers/telegram.svg" alt="telegram" class="header-middle__messenger-icon">
                     </a>
 
                     <a href="#" class="header-middle__messenger-link" aria-label="VK">
-                        <img src="/images/messengers/vk.svg" alt="" class="header-middle__messenger-icon">
+                        <img src="/images/messengers/vk.svg" alt=vk" class="header-middle__messenger-icon">
                     </a>
                 </div>
             </div>
 
             <div class="header-middle__slider">
                 <div class="header-middle__slider-track">
-
-                    <div class="header-middle__slide">
-                        <img src="/images/bg.png" alt="" class="header-middle__slide-image">
-
-                        <button class="header-middle__slide-play" type="button" aria-label="Смотреть видео">
-                            <span class="header-middle__play-icon"></span>
-                        </button>
-                    </div>
-
                     <div class="header-middle__slide">
                         <img src="/images/bg.png" alt="" class="header-middle__slide-image">
                     </div>
 
+                    <div class="header-middle__slide">
+                        <img src="/images/bg.png" alt="bg" class="header-middle__slide-image">
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,6 +263,7 @@
         </div>
     </div>
 </header>
+<!---MAIN--->
 <main class="main">
     <!---NAVIGATION-TOUR--->
     <nav class="tour-navigation">
@@ -1155,6 +1242,106 @@
         </div>
     </div>
 </footer>
+<!---FORM-CALL--->
+<div class="callback-modal js-callback-modal">
+    <div class="callback-modal__dialog">
+        <button class="callback-modal__close js-callback-close" type="button" aria-label="Закрыть"></button>
+
+        <p class="callback-modal__title">
+            Оставьте номер вашего<br>
+            телефона, и наш менеджер<br>
+            свяжется с вами.
+        </p>
+
+        <form class="callback-modal__form">
+            <input class="callback-modal__input" type="text" name="name" placeholder="Имя">
+            <input class="callback-modal__input" type="tel" name="phone" placeholder="Телефон">
+
+            <label class="callback-modal__agree">
+                <input type="checkbox" name="agree">
+                <span>Согласие с политикой конфиденциальности</span>
+            </label>
+
+            <button class="callback-modal__submit" type="submit">
+                Заказать звонок
+            </button>
+        </form>
+    </div>
+</div>
+<!---NAVIGATION-MOBILE-->
+<nav class="mobile-menu js-mobile-menu">
+    <button class="mobile-menu__close js-mobile-menu-close" type="button" aria-label="Закрыть меню"></button>
+
+    <div class="mobile-menu__inner">
+        <button class="mobile-menu__button" type="button">Мы на связи</button>
+
+        <a href="tel:+442037699314" class="mobile-menu__phone">
+            +44 20 3769 9314
+        </a>
+
+        <div class="mobile-menu__selects">
+            <select class="mobile-menu__select" aria-label="Валюта">
+                <option>EUR</option>
+                <option>USD</option>
+                <option>RUB</option>
+            </select>
+
+            <select class="mobile-menu__select" aria-label="Язык">
+                <option>RU</option>
+                <option>EN</option>
+            </select>
+        </div>
+
+        <div class="mobile-tours">
+            <button class="mobile-tours__title js-mobile-tours-title" type="button">
+                Все туры
+            </button>
+
+            <div class="mobile-tours__list">
+                <div class="mobile-tours__item">
+                    <button class="mobile-tours__category js-mobile-tours-category" type="button">
+                        Эльбрус
+                        <span></span>
+                    </button>
+
+                    <ul class="mobile-tours__submenu">
+                        <li><a href="#">Эльбрус с юга</a></li>
+                        <li><a href="#">Траверс Эльбруса с севера на юг</a></li>
+                        <li><a href="#">Восхождение на Эльбрус с востока</a></li>
+                        <li><a href="#">Две вершины: Казбек с юга + Эльбрус</a></li>
+                        <li><a href="#">Эльбрус с кислородом за 1 день</a></li>
+                        <li><a href="#">Зимний тур на Эльбрус</a></li>
+                    </ul>
+                </div>
+
+                <div class="mobile-tours__item">
+                    <button class="mobile-tours__category js-mobile-tours-category" type="button">
+                        Казбек
+                        <span></span>
+                    </button>
+
+                    <ul class="mobile-tours__submenu">
+                        <li><a href="#">Казбек с юга</a></li>
+                        <li><a href="#">Казбек с севера</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu__messengers">
+            <a href="#" class="mobile-menu__messenger">
+                <img src="/images/messengers/telegram.svg" alt="">
+            </a>
+
+            <a href="#" class="mobile-menu__messenger">
+                <img src="/images/messengers/whatsapp.svg" alt="">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script src="js/tours-list.js"></script>
+<script src="js/navigation-mobile.js"></script>
+<script src="js/form-call.js"></script>
 </body>
 </html>
-

@@ -73,6 +73,57 @@
     align-items: start;
   }
 
+  &__tour {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    &-header {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(16);
+    }
+
+    &-image {
+      width: rem(86);
+      height: rem(85);
+      border-radius: rem(10);
+      object-fit: cover;
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+    }
+
+    &-title {
+      @include title-guide;
+    }
+
+    &-information {
+      display: flex;
+      align-items: flex-end;
+      gap: rem(18);
+    }
+
+    &-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-value {
+      color: $gray;
+      font-size: rem(20);
+    }
+
+    &-label {
+      color: $gray;
+      font-size: rem(12);
+    }
+  }
+
   &__avatar {
     grid-area: avatar;
     width: rem(62);
@@ -91,10 +142,8 @@
     grid-area: countries;
     display: flex;
     align-items: center;
+    @include text-sm;
     gap: rem(5);
-    margin-top: 0;
-    font-size: rem(14);
-    line-height: 1.05;
 
     img {
       width: rem(22);

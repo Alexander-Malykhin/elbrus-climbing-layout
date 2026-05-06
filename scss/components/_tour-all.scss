@@ -1,0 +1,233 @@
+@use '../settings/fonts' as *;
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+@use '../settings/mixins' as *;
+@use '../settings/containers' as *;
+
+.tour-all {
+  position: relative;
+
+  &__toggle {
+    @include fz-16($fw-medium);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: $white;
+
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + #{rem(22)});
+    left: 0;
+    z-index: 50;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(rem(8));
+
+    transition:
+            opacity .2s ease,
+            visibility .2s ease,
+            transform .2s ease;
+  }
+
+  &.is-open &__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__categories,
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: $white;
+  }
+
+  &__categories {
+    width: rem(170);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: rem(44);
+    padding: 0 rem(20);
+
+    border: 0;
+    border-bottom: rem(1) solid rgba($gray, .25);
+    background: $white;
+
+    color: $black;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+
+    transition: color .2s ease;
+  }
+
+  &__category:hover,
+  &__item.is-active &__category {
+    color: $main-green;
+  }
+
+  &__category-arrow {
+    width: rem(8);
+    height: rem(8);
+
+    border-right: rem(2) solid currentColor;
+    border-bottom: rem(2) solid currentColor;
+
+    transform: rotate(45deg);
+    transition: transform .25s ease;
+  }
+
+  &__item.is-active &__category-arrow {
+    transform: rotate(-45deg);
+  }
+
+  &__content {
+    position: absolute;
+    left: calc(100% + #{rem(4)});
+    top: var(--tour-all-content-top, 0);
+
+    width: rem(300);
+    background: $white;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(rem(-8));
+
+    transition:
+            opacity .3s ease-out,
+            visibility .3s ease-out,
+            transform .3s ease-out,
+            top .3s ease-out;
+  }
+
+  &__content.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &__list {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    li {
+      border-bottom: rem(1) solid rgba($gray, .25);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      min-height: rem(44);
+      padding: 0 rem(20);
+
+      color: $black;
+      text-decoration: none;
+
+      transition: color .2s ease;
+
+      &:hover {
+        color: $main-green;
+      }
+    }
+  }
+
+  @media (max-width: rem($w_840)) {
+    display: none;
+  }
+}
+
+.mobile-tours {
+  margin-top: rem(24);
+
+  &__title {
+    background: none;
+    color: $main-green;
+  }
+
+  &__list {
+    display: none;
+    margin-top: rem(22);
+  }
+
+  &.is-open &__list {
+    display: block;
+  }
+
+  &__item {
+    margin-bottom: rem(14);
+    background: $white;
+    box-shadow: 0 rem(6) rem(18) rgba($black, .06);
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: rem(56);
+    padding: 0 rem(20);
+    border: 0;
+    background: $white;
+    cursor: pointer;
+  }
+
+  &__category span {
+    width: rem(8);
+    height: rem(8);
+    border-right: rem(2) solid currentColor;
+    border-bottom: rem(2) solid currentColor;
+    transform: rotate(45deg);
+    transition: transform .25s ease;
+  }
+
+  &__item.is-open &__category {
+    background: $main-green;
+    color: $white;
+    font-weight: $fw-bold;
+  }
+
+  &__item.is-open &__category span {
+    transform: rotate(225deg);
+  }
+
+  &__submenu {
+    display: none;
+    list-style: none;
+    background: $white;
+  }
+
+  &__item.is-open &__submenu {
+    display: block;
+  }
+
+  &__submenu li {
+    border-bottom: rem(1) solid rgba($gray, .2);
+  }
+
+  &__submenu a {
+    display: block;
+    padding: rem(16) rem(20);
+  }
+}

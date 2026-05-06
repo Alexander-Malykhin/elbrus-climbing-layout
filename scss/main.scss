@@ -19,6 +19,8 @@
 @use 'components/page-header-lite';
 @use 'components/tour-card';
 @use 'components/calendar-card';
+@use 'components/callback-modal';
+@use 'components/mobile-routes';
 
 //header
 @use './blocks/header/index' as header;
@@ -45,10 +47,24 @@
 //footer
 @use './blocks/footer' as footer;
 
+* {
+  font-family: $ff-inter;
+}
+
 .page {
   margin: rem(80) 0;
 }
 
 .elements-visible {
   opacity: 0;
+}
+
+@media (max-width: rem(700)) {
+  .elements-display {
+    display: none;
+  }
+
+  .page  {
+    margin: rem(20) 0 ;
+  }
 }

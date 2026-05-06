@@ -18,9 +18,105 @@
 
       <div class="header-top__panel">
         <nav class="header-top__nav" aria-label="Основная навигация">
-          <a href="#" class="header-top__nav-link header-top__nav-link--desktop-only">
-            Все туры
-          </a>
+          <!---TOUR-LIST--->
+          <div class="tour-all">
+            <button class="tour-all__toggle js-tour-all-toggle" type="button">
+              Все туры
+            </button>
+
+            <div class="tour-all__dropdown">
+              <ul class="tour-all__categories">
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="elbrus">
+                    Эльбрус
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="kazbek">
+                    Казбек
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="lenin">
+                    Пик Ленина
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="nepal">
+                    Непал
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="kilimanjaro">
+                    Килиманджаро
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="ararat">
+                    Арарат
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+
+                <li class="tour-all__item">
+                  <button class="tour-all__category js-tour-all-category" type="button" data-menu="thailand">
+                    Таиланд
+                    <span class="tour-all__category-arrow"></span>
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tour-all__content">
+                <ul class="tour-all__list" data-content="elbrus">
+                  <li><a href="#">Эльбрус с юга</a></li>
+                  <li><a href="#">Траверс Эльбруса с севера на юг</a></li>
+                  <li><a href="#">Восхождение на Эльбрус с востока</a></li>
+                  <li><a href="#">Две вершины: Казбек с юга + Эльбрус</a></li>
+                  <li><a href="#">Эльбрус с кислородом за 1 день</a></li>
+                  <li><a href="#">Зимний тур на Эльбрус</a></li>
+                </ul>
+
+                <ul class="tour-all__list" data-content="kazbek">
+                  <li><a href="#">Казбек с юга</a></li>
+                  <li><a href="#">Казбек с севера</a></li>
+                </ul>
+
+                <ul class="tour-all__list" data-content="lenin">
+                  <li><a href="#">Пик Ленина классика</a></li>
+                  <li><a href="#">Пик Ленина с гидом</a></li>
+                </ul>
+
+                <ul class="tour-all__list" data-content="nepal">
+                  <li><a href="#">Треккинг к Эвересту</a></li>
+                  <li><a href="#">Аннапурна</a></li>
+                </ul>
+
+                <ul class="tour-all__list" data-content="kilimanjaro">
+                  <li><a href="#">Восхождение на Килиманджаро (Марангу)</a></li>
+                  <li><a href="#">Восхождение на Килиманджаро (Мачаме)</a></li>
+                  <li><a href="#">Килиманджаро, маршрут Лемошо</a></li>
+                </ul>
+
+                <ul class="tour-all__list" data-content="ararat">
+                  <li><a href="#">Арарат классика</a></li>
+                </ul>
+
+                <ul class="tour-all__list" data-content="thailand">
+                  <li><a href="#">Тур в Таиланд</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
           <a href="tel:+74951087465" class="header-top__nav-link header-top__nav-link--phone">
             +7 495 108 74 65
@@ -61,7 +157,7 @@
       </div>
     </div>
     <!---HEADER-MIDDLE--->
-    <div class="header-middle">
+    <div class="header-middle elements-display">
       <div class="header-middle__banner">
         <ul class="header-middle__tags">
           <li class="header-middle__tag">Непал</li>
@@ -73,7 +169,7 @@
           Тур в Непал: трек вокруг Аннапурны и озеро Тиличо, Гималаи
         </h1>
 
-        <button class="header-middle__play elements-visible" type="button" aria-label="Смотреть видео">
+        <button class="header-middle__play elements-visible elements-display" type="button" aria-label="Смотреть видео">
           <span class="header-middle__play-icon"></span>
         </button>
 
@@ -100,7 +196,7 @@
         </div>
       </div>
 
-      <div class="header-middle__slider">
+      <div class="header-middle__slider elements-display">
         <div class="header-middle__slider-track">
 
           <div class="header-middle__slide">
@@ -119,11 +215,10 @@
       </div>
     </div>
     <!---HEADER-BOTTOM--->
-    <div class="header-bottom elements-visible">
+    <div class="header-bottom elements-visible elements-display">
       <div class="header-bottom__stats">
         <div class="header-bottom__stat">
-          <div class="header-bottom__value-desktop">120 <span
-                  class="header-bottom__value-desktop-text">км</span></div>
+          <div class="header-bottom__value-desktop">120 <span class="header-bottom__value-desktop-text">км</span></div>
           <div class="header-bottom__label-desktop">Протяженность</div>
 
           <div class="header-bottom__value-mobile">120</div>
@@ -180,7 +275,7 @@
 <!---MAIN--->
 <main class="main page">
   <!---SECTION-MORE--->
-  <section class="section more">
+  <section class="section more elements-display">
     <div class="container">
       <div class="section__layout">
         <div class="section-line" style="--current: 9; --total: 9;"></div>
@@ -341,7 +436,7 @@
     </div>
   </section>
   <!---SECTION-DEPARTURES--->
-  <section class="section departures">
+  <section class="section departures elements-display">
     <div class="container">
       <div class="section__layout">
         <div class="section-line" style="--current: 6; --total: 9;"></div>
@@ -350,29 +445,41 @@
 
         <div class="departures__content">
           <div class="departures__table">
-            <div class="departures__head">
-              <span class="departures__head-title">Дата заезда</span>
-              <span class="departures__head-title">Гид</span>
-              <span class="departures__head-title">Осталось</span>
-              <span class="departures__head-title">Цена</span>
-              <span class="departures__head-title"></span>
-            </div>
-
             <article class="departures__item">
               <div class="departures__date">
                 01.05.2026 -<br>
                 09.05.2026
               </div>
 
-              <div class="departures__guide">
-                <img class="departures__avatar" src="/images/departures/guide.png" alt="Игорь Бинас">
+              <div class="departures__tour">
+                <div class="departures__tour-header">
+                  <img src="./images/bg.png" alt="" class="departures__tour-image">
 
-                <div class="departures__guide-info">
-                  <h3 class="departures__guide-name">Игорь Бинас</h3>
-                  <p class="departures__guide-position">
-                    Инструктор альпинизма, инструктор по<br>
-                    горным лыжам
-                  </p>
+                  <div class="departures__tour-body">
+                    <h2 class="departures__tour-title">Эльбрус с юга</h2>
+
+                    <div class="departures__tour-information">
+                      <div class="departures__tour-stat"><b class="departures__tour-value">9</b><span class="departures__tour-label">дней</span></div>
+                      <div class="departures__tour-stat"><b class="departures__tour-value">25</b><span class="departures__tour-label">km</span></div>
+                      <div class="more-card__rating">
+                        <div class="more-card__bars is-level-2">
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                        </div>
+                        <span class="departures__tour-label">сложность</span>
+                      </div>
+
+                      <div class="more-card__rating">
+                        <div class="more-card__bars is-level-3">
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                        </div>
+                        <span class="departures__tour-label">комфорт</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="departures__countries">
@@ -399,21 +506,35 @@
               </div>
 
 
-              <div class="departures__guide">
-                <img class="departures__avatar" src="/images/departures/guide.png" alt="Игорь Бинас">
+              <div class="departures__tour">
+                <div class="departures__tour-header">
+                  <img src="./images/bg.png" alt="" class="departures__tour-image">
 
-                <div class="departures__guide-info">
-                  <h3 class="departures__guide-name">Игорь Бинас</h3>
-                  <p class="departures__guide-position">
-                    Инструктор альпинизма, инструктор по<br>
-                    горным лыжам
-                  </p>
-                </div>
+                  <div class="departures__tour-body">
+                    <h2 class="departures__tour-title">Эльбрус с юга</h2>
 
-                <div class="departures__countries">
-                  <span>Участники<br>из:</span>
-                  <img src="images/flags/gb-ukm.svg" alt="">
-                  <img src="images/flags/cn.svg" alt="">
+                    <div class="departures__tour-information">
+                      <div class="departures__tour-stat"><b class="departures__tour-value">9</b><span class="departures__tour-label">дней</span></div>
+                      <div class="departures__tour-stat"><b class="departures__tour-value">25</b><span class="departures__tour-label">km</span></div>
+                      <div class="more-card__rating">
+                        <div class="more-card__bars is-level-2">
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                        </div>
+                        <span class="departures__tour-label">сложность</span>
+                      </div>
+
+                      <div class="more-card__rating">
+                        <div class="more-card__bars is-level-3">
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                          <span class="rating-bars__item"></span>
+                        </div>
+                        <span class="departures__tour-label">комфорт</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -441,6 +562,303 @@
       </div>
     </div>
   </section>
+  <!---SECTION-CARDS--->
+  <section class="section more mobile-routes">
+    <div class="container">
+      <div class="section__layout">
+        <h2 class="more__title section-heading mobile-routes__title">
+          Расписание предстоящих туров
+        </h2>
+
+        <div class="mobile-routes__tabs">
+          <button class="mobile-routes__tab is-active" type="button" data-mobile-routes-tab="calendar">
+            Календарь туров
+          </button>
+
+          <button class="mobile-routes__tab" type="button" data-mobile-routes-tab="routes">
+            Все маршруты
+          </button>
+        </div>
+
+        <div class="mobile-routes__panel">
+          <div class="more__content">
+            <button class="more__arrow more__arrow--prev" type="button"></button>
+
+            <div class="more__slider" data-mobile-routes-content="calendar">
+              <article class="more-card">
+                <div class="more-card__image">
+                  <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
+                  <div class="more-card__tags">
+                    <span class="more-card__tag">Россия</span>
+                    <span class="more-card__tag">Восхождение</span>
+                  </div>
+                  <h3 class="more-card__title">Траверс Эльбруса с севера на юг</h3>
+                </div>
+
+                <div class="more-card__body">
+                  <div class="more-card__stats">
+                    <div class="more-card__stat"><b class="more-card__stat-value">9</b><span class="more-card__stat-label">дней</span></div>
+                    <div class="more-card__stat"><b class="more-card__stat-value">34</b><span class="more-card__stat-label">km</span></div>
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-2">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">сложность</span>
+                    </div>
+
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-3">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">комфорт</span>
+                    </div>
+                  </div>
+
+                  <div class="more-card__info">
+                    <p class="more-card__info-text">30.05.2026,<br>ещё 4 тура<br>и под заказ</p>
+                    <p class="more-card__info-text more-card__info-text--align-right">до 08.05.2026<br><span class="more-card__price-old">€3 390</span><br>от <b class="more-card__price-current">€2 100</b></p>
+                  </div>
+
+                  <div class="more-card__actions">
+                    <a href="#" class="more-card__link">Подробнее</a>
+                    <button class="button" type="button">Забронировать</button>
+                  </div>
+                </div>
+              </article>
+              <article class="more-card">
+                <div class="more-card__image">
+                  <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
+                  <div class="more-card__tags">
+                    <span class="more-card__tag">Россия</span>
+                    <span class="more-card__tag">Восхождение</span>
+                  </div>
+                  <h3 class="more-card__title">Эльбрус с кислородом за 1 день</h3>
+                </div>
+
+                <div class="more-card__body">
+                  <div class="more-card__stats">
+                    <div class="more-card__stat">
+                      <b class="more-card__stat-value">3</b>
+                      <span class="more-card__stat-label">дня</span>
+                    </div>
+
+                    <div class="more-card__stat">
+                      <b class="more-card__stat-value">5</b>
+                      <span class="more-card__stat-label">km</span>
+                    </div>
+
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-1">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">сложность</span>
+                    </div>
+
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-3">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">комфорт</span>
+                    </div>
+                  </div>
+
+                  <div class="more-card__info">
+                    <p class="more-card__info-text">Только под заказ</p>
+                    <p class="more-card__info-text more-card__info-text--align-right"><b class="more-card__price-current">€1 900</b></p>
+                  </div>
+
+                  <div class="more-card__actions">
+                    <a href="#" class="more-card__link">Подробнее</a>
+                    <button class="button" type="button">Забронировать</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="more__slider" data-mobile-routes-content="routes" hidden>
+              <article class="more-card">
+                <div class="more-card__image">
+                  <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
+                  <div class="more-card__tags">
+                    <span class="more-card__tag">Россия</span>
+                    <span class="more-card__tag">Восхождение</span>
+                  </div>
+                  <h3 class="more-card__title">Эльбрус с кислородом за 1 день</h3>
+                </div>
+
+                <div class="more-card__body">
+                  <div class="more-card__stats">
+                    <div class="more-card__stat">
+                      <b class="more-card__stat-value">3</b>
+                      <span class="more-card__stat-label">дня</span>
+                    </div>
+
+                    <div class="more-card__stat">
+                      <b class="more-card__stat-value">5</b>
+                      <span class="more-card__stat-label">km</span>
+                    </div>
+
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-1">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">сложность</span>
+                    </div>
+
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-3">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">комфорт</span>
+                    </div>
+                  </div>
+
+                  <div class="more-card__info">
+                    <p class="more-card__info-text">Только под заказ</p>
+                    <p class="more-card__info-text more-card__info-text--align-right"><b class="more-card__price-current">€1 900</b></p>
+                  </div>
+
+                  <div class="more-card__actions">
+                    <a href="#" class="more-card__link">Подробнее</a>
+                    <button class="button" type="button">Забронировать</button>
+                  </div>
+                </div>
+              </article>
+              <article class="more-card">
+                <div class="more-card__image">
+                  <img src="/images/tours/tour-1.png" alt="" class="more-card__image-media">
+                  <div class="more-card__tags">
+                    <span class="more-card__tag">Россия</span>
+                    <span class="more-card__tag">Восхождение</span>
+                  </div>
+                  <h3 class="more-card__title">Траверс Эльбруса с севера на юг</h3>
+                </div>
+
+                <div class="more-card__body">
+                  <div class="more-card__stats">
+                    <div class="more-card__stat"><b class="more-card__stat-value">9</b><span class="more-card__stat-label">дней</span></div>
+                    <div class="more-card__stat"><b class="more-card__stat-value">34</b><span class="more-card__stat-label">km</span></div>
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-2">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">сложность</span>
+                    </div>
+
+                    <div class="more-card__rating">
+                      <div class="more-card__bars is-level-3">
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                        <span class="rating-bars__item"></span>
+                      </div>
+                      <span class="more-card__rating-label">комфорт</span>
+                    </div>
+                  </div>
+
+                  <div class="more-card__info">
+                    <p class="more-card__info-text">30.05.2026,<br>ещё 4 тура<br>и под заказ</p>
+                    <p class="more-card__info-text more-card__info-text--align-right">до 08.05.2026<br><span class="more-card__price-old">€3 390</span><br>от <b class="more-card__price-current">€2 100</b></p>
+                  </div>
+
+                  <div class="more-card__actions">
+                    <a href="#" class="more-card__link">Подробнее</a>
+                    <button class="button" type="button">Забронировать</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <button class="more__arrow more__arrow--next" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!---NAVIGATION-MOBILE-->
+  <div class="mobile-menu js-mobile-menu">
+    <button class="mobile-menu__close js-mobile-menu-close" type="button" aria-label="Закрыть меню"></button>
+
+    <div class="mobile-menu__inner">
+      <button class="mobile-menu__button" type="button">Мы на связи</button>
+
+      <a href="tel:+442037699314" class="mobile-menu__phone">
+        +44 20 3769 9314
+      </a>
+
+      <div class="mobile-menu__selects">
+        <select class="mobile-menu__select" aria-label="Валюта">
+          <option>EUR</option>
+          <option>USD</option>
+          <option>RUB</option>
+        </select>
+
+        <select class="mobile-menu__select" aria-label="Язык">
+          <option>RU</option>
+          <option>EN</option>
+        </select>
+      </div>
+
+      <div class="mobile-tours">
+        <button class="mobile-tours__title js-mobile-tours-title" type="button">
+          Все туры
+        </button>
+
+        <div class="mobile-tours__list">
+          <div class="mobile-tours__item">
+            <button class="mobile-tours__category js-mobile-tours-category" type="button">
+              Эльбрус
+              <span></span>
+            </button>
+
+            <ul class="mobile-tours__submenu">
+              <li><a href="#">Эльбрус с юга</a></li>
+              <li><a href="#">Траверс Эльбруса с севера на юг</a></li>
+              <li><a href="#">Восхождение на Эльбрус с востока</a></li>
+              <li><a href="#">Две вершины: Казбек с юга + Эльбрус</a></li>
+              <li><a href="#">Эльбрус с кислородом за 1 день</a></li>
+              <li><a href="#">Зимний тур на Эльбрус</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-tours__item">
+            <button class="mobile-tours__category js-mobile-tours-category" type="button">
+              Казбек
+              <span></span>
+            </button>
+
+            <ul class="mobile-tours__submenu">
+              <li><a href="#">Казбек с юга</a></li>
+              <li><a href="#">Казбек с севера</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu__messengers">
+        <a href="#" class="mobile-menu__messenger">
+          <img src="/images/messengers/telegram.svg" alt="">
+        </a>
+
+        <a href="#" class="mobile-menu__messenger">
+          <img src="/images/messengers/whatsapp.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
 </main>
 <!---FOOTER--->
 <footer class="footer">
@@ -507,6 +925,10 @@
     </div>
   </div>
 </footer>
+
+<script src="js/tours-list.js"></script>
+<script src="js/navigation-mobile.js"></script>
+<script src="js/form-call.js"></script>
 </body>
 </html>
 

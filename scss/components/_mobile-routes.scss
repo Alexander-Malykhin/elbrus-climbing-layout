@@ -1,0 +1,74 @@
+@use '../settings/fonts' as *;
+@use '../settings/colors' as *;
+@use '../settings/functions' as *;
+@use '../settings/mixins' as *;
+
+.mobile-routes {
+  @media (max-width: rem(700)) {
+    .section-line,
+    .more__arrow {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: rem(44);
+      font-size: rem(22);
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    &__tabs {
+      display: flex;
+      justify-content: center;
+      gap: rem(16);
+      margin-bottom: rem(30);
+    }
+
+    &__tab {
+      padding: 0 0 rem(10);
+      border: 0;
+      border-bottom: rem(1) solid transparent;
+      background: none;
+      color: $main-green;
+      font: inherit;
+      font-size: rem(16);
+      cursor: pointer;
+
+      &.is-active {
+        border-color: $main-green;
+      }
+    }
+
+    &__panel {
+      width: 100%;
+    }
+
+    .more__content {
+      display: block;
+    }
+
+    .more__slider {
+      display: flex;
+      gap: rem(10);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: rem(30);
+
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &[hidden] {
+        display: none;
+      }
+    }
+
+    .more-card {
+      flex: 0 0 min(rem(304), calc(100vw - #{rem(64)}));
+      width: min(rem(304), calc(100vw - #{rem(64)}));
+      scroll-snap-align: start;
+    }
+  }
+}

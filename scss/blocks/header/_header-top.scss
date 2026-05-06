@@ -11,8 +11,6 @@
   justify-content: space-between;
   gap: rem(40);
 
-  flex-wrap: wrap;
-
   &__logo-link {
     display: block;
     width: clamp(rem(60), 10vw, rem(100));
@@ -29,16 +27,12 @@
     display: flex;
     align-items: center;
     gap: rem(40);
-
-    flex-wrap: wrap;
   }
 
   &__nav {
     display: flex;
     align-items: center;
     gap: rem(24);
-
-    flex-wrap: wrap;
   }
 
   &__callback {
@@ -58,7 +52,7 @@
     color: $white;
     text-decoration: none;
 
-    transition: opacity .3s ease;
+    transition: opacity .3s ease-in-out;
 
     &:hover {
       opacity: .85;
@@ -69,8 +63,6 @@
     display: flex;
     align-items: center;
     gap: rem(22);
-
-    flex-wrap: wrap;
   }
 
   &__mobile-actions {
@@ -179,6 +171,7 @@
     }
   }
 
+  //ADAPTIVE
   @media (max-width: rem(834)) {
     &__nav-link--desktop-only {
       display: none;

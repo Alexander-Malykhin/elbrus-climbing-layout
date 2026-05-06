@@ -63,13 +63,14 @@
     @include rating-bars($white);
   }
 
-  @media (max-width: rem(1280)) {
+  //ADAPTIVE
+  @media (max-width: rem($w_1280)) {
     &__text {
       display: none;
     }
   }
 
-  @media (max-width: rem(840)) {
+  @media (max-width: rem($w_840)) {
     &__stat {
       align-items: center;
       justify-content: center;
@@ -98,7 +99,7 @@
     }
   }
 
-  @media (max-width: rem(700)) {
+  @media (max-width: rem($w_700)) {
     &__information {
       display: none;
     }
