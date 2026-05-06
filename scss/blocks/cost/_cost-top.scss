@@ -19,6 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    box-sizing: border-box;
   }
 
   &__title {
@@ -161,16 +163,26 @@
 
   @media (max-width: rem(700)) {
     display: flex;
-    gap: rem(8);
+    grid-template-columns: none;
+    justify-content: flex-start;
+    gap: 0;
+
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
+
     position: relative;
     padding: rem(20) 0 rem(30);
 
     &__card {
-      flex: 0 0 rem(275);
-      width: rem(275);
+      flex: 0 0 100%;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+
       min-height: rem(320);
       padding: rem(24) rem(18) rem(22);
+
       position: relative;
       transition: transform 0.35s ease;
       box-shadow: 0 rem(16) rem(35) rgba($black, 0.12);
@@ -178,7 +190,7 @@
 
     &.is-second {
       .cost-top__card {
-        transform: translateX(calc(-100% - #{rem(8)}));
+        transform: translateX(-100%);
       }
     }
 

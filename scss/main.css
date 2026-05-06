@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* Reset and base styles  */
 * {
@@ -1178,6 +1179,7 @@ body.is-modal-open {
   border-bottom: 0.0625rem solid rgba(126, 134, 154, 0.2);
 }
 .mobile-tours__submenu a {
+  color: #222222;
   display: block;
   padding: 1rem 1.25rem;
 }
@@ -1290,7 +1292,7 @@ body.is-menu-open {
 }
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("images/bg.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1865,6 +1867,7 @@ body.is-menu-open {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 .cost-top__title {
   font-family: "Inter", sans-serif;
@@ -2002,14 +2005,20 @@ body.is-menu-open {
 @media (max-width: 43.75rem) {
   .cost-top {
     display: flex;
-    gap: 0.5rem;
+    grid-template-columns: none;
+    justify-content: flex-start;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
     padding: 1.25rem 0 1.875rem;
   }
   .cost-top__card {
-    flex: 0 0 17.1875rem;
-    width: 17.1875rem;
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     min-height: 20rem;
     padding: 1.5rem 1.125rem 1.375rem;
     position: relative;
@@ -2017,7 +2026,7 @@ body.is-menu-open {
     box-shadow: 0 1rem 2.1875rem rgba(34, 34, 34, 0.12);
   }
   .cost-top.is-second .cost-top__card {
-    transform: translateX(calc(-100% - 0.5rem));
+    transform: translateX(-100%);
   }
   .cost-top__title {
     margin-bottom: 0.875rem;
@@ -2366,6 +2375,7 @@ body.is-menu-open {
   .departures__content {
     max-width: none;
     margin: 0;
+    overflow: hidden;
   }
   .departures__table {
     display: flex;
@@ -2373,7 +2383,7 @@ body.is-menu-open {
     gap: 0.625rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 1.25rem 0 1.875rem;
+    padding: 1.25rem 1rem 1.875rem;
     scrollbar-width: none;
   }
   .departures__table::-webkit-scrollbar {
@@ -2383,9 +2393,10 @@ body.is-menu-open {
     display: none;
   }
   .departures__item {
-    flex: 0 0 min(19rem, 100vw - 4rem);
-    width: min(19rem, 100vw - 4rem);
-    max-width: 19rem;
+    flex: 0 0 18.75rem;
+    width: 18.75rem;
+    min-width: 18.75rem;
+    max-width: 18.75rem;
     min-height: 25.4375rem;
     padding: 1.75rem 1.125rem 1.125rem;
     scroll-snap-align: start;
@@ -2403,6 +2414,15 @@ body.is-menu-open {
     font-weight: 700;
     line-height: 1.25;
   }
+  .departures__date::before {
+    content: "Ближайший заезд";
+    display: block;
+    margin-bottom: 0.375rem;
+    color: #7E869A;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
   .departures__price {
     grid-area: price;
     font-size: 0.875rem;
@@ -2419,20 +2439,49 @@ body.is-menu-open {
     line-height: 1.35;
     color: #7E869A;
   }
+  .departures__places::before {
+    content: "Осталось:";
+    display: block;
+    color: #7E869A;
+    font-size: 0.75rem;
+  }
   .departures__guide {
     grid-area: guide;
     display: grid;
     grid-template-columns: 3.625rem 1fr;
-    grid-template-areas: "avatar info" "countries countries";
+    grid-template-areas: "avatar info" "position position" "countries countries";
     column-gap: 0.875rem;
     row-gap: 0.625rem;
-    align-items: start;
+    align-items: center;
     padding-top: 1.125rem;
     border-top: 0.0625rem solid rgba(126, 134, 154, 0.25);
   }
+  .departures__guide-info {
+    grid-area: info;
+  }
   .departures__avatar {
+    grid-area: avatar;
     width: 3.625rem;
     height: 3.625rem;
+  }
+  .departures__guide-position {
+    grid-area: position;
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+  .departures__countries {
+    grid-area: countries;
+  }
+  .departures__guide-name {
+    color: #4DD2A3;
+  }
+  .departures__guide-name::before {
+    content: "Гид:";
+    display: block;
+    color: #7E869A;
+    font-size: 0.75rem;
+    font-weight: 400;
   }
   .departures__countries {
     font-size: 0.75rem;
@@ -2697,7 +2746,7 @@ body.is-menu-open {
     padding: 0.5rem 0;
   }
   .more__slider {
-    grid-auto-columns: minmax(16.25rem, 18.75rem);
+    grid-auto-columns: minmax(18rem, 18.75rem);
     padding: 0.625rem 0 1rem;
     margin: 0;
   }
